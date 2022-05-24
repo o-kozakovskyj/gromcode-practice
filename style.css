@@ -1,31 +1,10 @@
+html {
+  font-size: 24px;
+}
 
-.at-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+p {
+  color: green;
 }
-.at-item {
-  color: #3079ed;
-  animation-name: focus-in-contract;
-  animation-duration: 4.2s;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
-  animation-fill-mode: both;
-  /* shorthand 
-  animation: focus-in-contract 4.2s ease 0s infinite alternate-reverse both;
-  */ 
-}
-@keyframes focus-in-contract {
-  0%{
-    letter-spacing: 1em;
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100%{
-    filter: blur(0);
-    opacity: 1;
-  }
+li {
+  color: orange;
 }
