@@ -47,7 +47,7 @@ div {
 .relative-parent {
   position: relative;
   top:20px;
-  right: 50px;
+  left: 50px;
 }
 .absolute-parent {
   position: absolute;
@@ -56,5 +56,5 @@ div {
 }
 .fixed-parent {
   bottom: 20px;
-  left: 30px;
+  right: 30px;
 }
