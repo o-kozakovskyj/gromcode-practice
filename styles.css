@@ -28,7 +28,7 @@ div>p {
 input[type="text"] {
   background-color: grey;
 }
-div:nth-child(5) {
+div:nth-child(5)>p {
   background-color: yellow;
 }
 div:nth-child(5)>p:nth-child(3) {
