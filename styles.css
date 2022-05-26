@@ -32,7 +32,8 @@ list-style-type: none;
   background-color: aquamarine;
   left: calc((100% - 200px)/2);
   position: absolute;
-  bottom: calc((100%-200px)/2);
+  bottom: 1000px;
+  top:calc((500px - 260px));
 }
 .ear {
   width: 40px;
