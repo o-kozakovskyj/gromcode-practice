@@ -1,15 +1,16 @@
 * {
   box-sizing: border-box;
 }
-
+ul, li {
+  margin: 0;
+}
 .header {
   background-color:darkturquoise;
   height: 40px;
-  line-height: 6px;
   position: fixed;
   width: 100%;
-  margin-bottom: 250px;
   z-index: 1;
+  line-height: 40px;
   
 }
 .nav-list {
