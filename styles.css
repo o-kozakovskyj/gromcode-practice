@@ -1,16 +1,14 @@
-*{
-  box-sizing: border-box;
-}
+
 .container {
   display: flex;
   flex-wrap: wrap;
-
 }
 
 .block {
   height: 100px;
-  min-width: 100px;
+  width: 100px;
   background-color: coral;
   margin: 8px;
   flex-grow: 1;
+  flex-shrink: 1;
 }
