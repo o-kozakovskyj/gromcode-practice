@@ -1,4 +1,4 @@
-body {
+/* body {
   box-sizing: border-box;
 }
 header {
@@ -17,4 +17,20 @@ header {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 150px;
+} */
+h1 {
+  text-align: center;
+}
+.articles-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.article {
+  box-sizing: border-box;
+  margin: 8px;
+  padding: 16px;
+  background-color: bisque;
+  flex-basis: 300px;
+  flex-shrink: 0;
+  flex-grow: 1;
 }
