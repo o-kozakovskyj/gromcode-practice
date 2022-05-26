@@ -2,33 +2,25 @@
   box-sizing: border-box;
 }
 
-.block_red {
-  height: 200px;
-  background-color: red;
-  float: left;
-  width: 20%;
-}
-.block_green {
-  height: 200px;
-  background-color: green;
-  float: left;
-  width: 20%;
-}
-.block_blue {
-  height: 200px;
-  background-color: blue;
-  float: left;
-  width: 20%;
-}
-.block_yellow {
-  height: 200px;
+.header {
+  height: 50px;
   background-color: yellow;
-  float: left;
-  width: 20%;
 }
-.block_black {
-  height: 200px;
-  background-color: black;
+.content {
+  height: 500px;
+  background-color: pink;
   float: left;
+  width: 80%;
+}
+.sidebar {
+  height: 500px;
+  background-color: grey;
   width: 20%;
+  float: left;
+}
+
+.footer {
+  height: 50px;
+  background-color: green;
+  clear: left;
 }
