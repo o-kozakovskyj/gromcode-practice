@@ -18,8 +18,12 @@ header {
   flex-shrink: 1;
   flex-basis: 150px;
 } */
-h1 {
+/* h1 {
   text-align: center;
+} */
+header {
+  display: flex;
+  justify-content: center;
 }
 .articles-list {
   display: flex;
