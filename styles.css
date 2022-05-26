@@ -1,18 +1,34 @@
 * {
   box-sizing: border-box;
 }
-.container {
-  float: left;
-  width: 50%;
-}
-.red {
+
+.block_red {
+  height: 200px;
   background-color: red;
-float: right;
+  float: left;
+  width: 20%;
 }
-.green {
+.block_green {
+  height: 200px;
   background-color: green;
   float: left;
+  width: 20%;
 }
-.footer {
-  clear: both;
+.block_blue {
+  height: 200px;
+  background-color: blue;
+  float: left;
+  width: 20%;
+}
+.block_yellow {
+  height: 200px;
+  background-color: yellow;
+  float: left;
+  width: 20%;
+}
+.block_black {
+  height: 200px;
+  background-color: black;
+  float: left;
+  width: 20%;
 }
