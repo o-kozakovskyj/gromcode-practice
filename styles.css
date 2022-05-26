@@ -55,6 +55,7 @@ div {
   left: 50px;
 }
 .fixed-parent {
+  position: fixed;
   bottom: 20px;
-  right: 30px;
+  left: 30px;
 }
