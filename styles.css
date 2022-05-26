@@ -2,8 +2,8 @@ body {
   box-sizing: border-box;
 }
 header {
-  
-  
+  display: flex;
+  justify-content: center;
 }
 
 .articles-list {
@@ -14,7 +14,7 @@ header {
   margin: 8px;
   padding: 16px;
   background-color: bisque;
-  flex-basis: 300px;
+  flex-basis: 150px;
   flex-grow: 1;
   flex-shrink: 1;
   
