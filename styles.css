@@ -1,6 +1,6 @@
 .page {
   display: flex;
-  flex-direction: column;
+ flex-direction: column;
   flex-wrap: wrap;
 }
 
@@ -8,6 +8,10 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.articles-list {
+  display: flex;
+  flex-wrap: wrap;
 }
 .article {
   margin: 8px;
