@@ -18,9 +18,6 @@ header {
   flex-shrink: 1;
   flex-basis: 150px;
 } */
-body {
-  box-sizing: border-box;
-}
 
 header {
   display: flex;
@@ -31,6 +28,7 @@ header {
   flex-wrap: wrap;
 }
 .article {
+  box-sizing: border-box;
   margin: 8px;
   padding: 16px;
   background-color: bisque;
