@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
 }
-ul, li {
+body, ul, li {
   margin: 0;
 }
 .header {
@@ -30,10 +30,9 @@ list-style-type: none;
   width: 200px;
   height: 200px;
   background-color: aquamarine;
-  left: calc((100% - 200px)/2);
+  left: calc((100vw - 280px)/2);
   position: absolute;
-  bottom: 1000px;
-  top:calc((500px - 260px));
+  top: calc((100vh - 260px)/2);
 }
 .ear {
   width: 40px;
