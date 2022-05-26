@@ -1,12 +1,20 @@
-
-div > div {
-  width: 100px;
+bodyb{
+  box-sizing: border-box;
+}
+.articles div {
   height: 100px;
-  background: coral;
+  width: 150px;
+  background-color: beige;
+  margin: 16px;
+  display: inline-block;
+  cursor: pointer;
 }
-.container :first-child {
-display: none;
+.cropped {
+  overflow: hidden;
 }
-.container :nth-child(2) {
-  visibility: hidden;
+.both-scrolls {
+  overflow: scroll;
+}
+.vertical-scroll {
+  overflow-y: scroll;
 }
