@@ -3,24 +3,62 @@
 }
 
 .header {
-  height: 50px;
-  background-color: yellow;
+  background-color:darkturquoise;
+  height: 40px;
+  line-height: 6px;
+  position: fixed;
+  width: 100%;
+  margin-bottom: 250px;
+  z-index: 1;
+  
+}
+.nav-list {
+list-style-type: none;
+}
+.nav-item {
+  float: left;
+  margin-left: 16px;
+  color: white;
 }
 .content {
-  height: 500px;
-  background-color: pink;
-  float: left;
-  width: 80%;
+  background-color: beige;
+  height: 5000px;
+  
 }
-.sidebar {
-  height: 500px;
+.head {
+  width: 200px;
+  height: 200px;
+  background-color: aquamarine;
+  left: calc((100% - 200px)/2);
+  position: absolute;
+  bottom: calc((100%-200px)/2);
+}
+.ear {
+  width: 40px;
+  height: 60px;
+  background-color: brown;
+  position: absolute;
+}
+.ear_left {
+  top:-60px;
+  left: -40px;
+}
+.ear_right {
+  top:-60px;
+  right: -40px;
+}
+.eye {
+  width: 30px;
+  height: 30px;
   background-color: grey;
-  width: 20%;
-  float: left;
+  border-radius: 50%;
+  position: absolute;
 }
-
-.footer {
-  height: 50px;
-  background-color: green;
-  clear: left;
+.eye_right {
+  left: 40px;
+  top: 80px;
+}
+.eye_left {
+  right: 40px;
+  top: 80px;
 }
