@@ -1,24 +1,19 @@
-body {
+.page {
   display: flex;
-  width: 100vw;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
-.block {
-  height: 300px;
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.article {
+  margin: 8px;
+  padding: 16px;
+  background-color: bisque;
+  flex-basis: 300px;
   flex-grow: 1;
   flex-shrink: 1;
-}
-.block_red {
-  background-color: red;
-}
-.block_green {
-  background-color: green;
-}
-.block_blue {
-  background-color: blue;
-}
-.block_yellow {
-  background-color: yellow;
-}
-.block_black {
-  background-color: black;
 }
