@@ -30,9 +30,9 @@ list-style-type: none;
   width: 200px;
   height: 200px;
   background-color: aquamarine;
-  left: calc((100vw - 280px)/2);
+  left: calc((100vw - 200px)/2);
   position: absolute;
-  top: calc((100vh - 260px)/2);
+  top: calc((100vh - 200px)/2);
 }
 .ear {
   width: 40px;
