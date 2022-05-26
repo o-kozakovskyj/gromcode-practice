@@ -1,7 +1,4 @@
-body {
-  box-sizing: border-box;
-  width: 100vw;
-}
+
 header {
   display: flex;
   justify-content: center;
@@ -15,7 +12,7 @@ header {
   margin: 8px;
   padding: 16px;
   background-color: bisque;
-  flex-basis: 150px;
+  flex-basis: 300px;
   flex-grow: 1;
   flex-shrink: 1;
   
