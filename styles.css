@@ -1,13 +1,14 @@
-body{
-  box-sizing: border-box;
+.articles {
+  display: flex;
 }
-.articles div {
+ .articles div {
   height: 100px;
   width: 150px;
   background-color: beige;
   margin: 16px;
-  display: inline-block;
   cursor: pointer;
+
+  
 }
 .cropped {
   overflow: hidden;
