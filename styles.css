@@ -3,11 +3,9 @@ div > div {
   width: 100px;
   height: 100px;
   background: coral;
-  margin-bottom: 10px;
 }
 .container :first-child {
 display: none;
-box-sizing: border-box;
 }
 .container :nth-child(2) {
   visibility: hidden;
