@@ -1,40 +1,23 @@
 
-.dropdown {
+.text {
+  box-sizing: border-box;
   margin: 16px;
-  font-size: 16px;
-  color: white;
+  border-bottom: 1px dotted black;
+  position: relative;
+  display: inline-block;
   cursor: pointer;
-  display: inline-block;
+}
+.tooltip {
   box-sizing: border-box;
-}
-.menu-button {
-  opacity: 0.8;
-  display: inline-block;
-  padding: 16px;
-  box-sizing: border-box;
-  background-color: darkgreen;
-  
-}
-.menu-button:hover {
-  opacity: 1;
-}
-.menu-list {
-  margin: 0;
-  padding: 0;
-  background-color: lightcyan;
-  color: black;
-  list-style: none;
-  min-width: 120px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  background-color: grey;
+  color: white;
   display: none;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  padding: 8px;
+  border-radius: 4px;
 }
-.menu-item {
-  padding: 16px;
-}
-.menu-item:hover {
-  color: ghostwhite;
-}
-.dropdown:hover .menu-list {
-  display: block;
+.text:hover .tooltip {
+  display: inline-block;
 }
