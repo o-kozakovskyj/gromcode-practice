@@ -1,21 +1,40 @@
-.articles {
-  display: flex;
-}
- .articles div {
-  height: 100px;
-  width: 150px;
-  background-color: beige;
-  margin: 16px;
-  cursor: pointer;
 
+.dropdown {
+  margin: 16px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.menu-button {
+  opacity: 0.8;
+  display: inline-block;
+  padding: 16px;
+  box-sizing: border-box;
+  background-color: darkgreen;
   
 }
-.cropped {
-  overflow: hidden;
+.menu-button:hover {
+  opacity: 1;
 }
-.both-scrolls {
-  overflow: scroll;
+.menu-list {
+  margin: 0;
+  padding: 0;
+  background-color: lightcyan;
+  color: black;
+  list-style: none;
+  min-width: 120px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  display: none;
 }
-.vertical-scroll {
-  overflow-y: scroll;
+.menu-item {
+  padding: 16px;
+}
+.menu-item:hover {
+  color: ghostwhite;
+}
+.dropdown:hover .menu-list {
+  display: block;
 }
