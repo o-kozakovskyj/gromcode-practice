@@ -1,10 +1,27 @@
-
-.gallery {
-  display: flex;
-  width: 100vw;
-  overflow-x: scroll;
-  cursor: all-scroll;
+* {
+  font-family: 'Roboto', san-serif;
+  font-size: 18px;
 }
-.thumb {
-  margin: 8px;
+section {
+  margin: 32px;
+}
+h1 {
+  word-spacing: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+p {
+  line-height: 28px;
+}
+b {
+  letter-spacing: 3px;
+  font-size: 24px;
+  opacity: 0.8;
+  text-decoration: underline;
+}
+a {
+  text-decoration: none;
+}
+em {
+  color:grey;
 }
