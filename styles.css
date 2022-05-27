@@ -1,7 +1,12 @@
+*{
+  margin: 0;
+}
 .gallery {
   display: flex;
+
 }
 .image {
+  box-sizing: border-box;
   width: 200px;
   height: 200px;
   margin: 16px;
