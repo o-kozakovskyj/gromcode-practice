@@ -1,20 +1,13 @@
-body {
-  font-family: Verdana, sans-serif;
+.list {
+  list-style: none;
+  font-size: 1.5em;
 }
-h1 {
-  text-align: center;
-  font-size: 74px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  width: 50vw;
-  margin: auto;
+.list :last-child {
+  text-decoration: underline green; 
 }
-div {
-  background-color: coral;
-  height: 200px;
-  color: white;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 200px;
+.list :nth-child(2) {
+  text-decoration: line-through;
+}
+.list :nth-child(1) {
+  text-decoration: overline red;
 }
