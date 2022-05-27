@@ -1,16 +1,13 @@
-*, h1 {
-  margin: 0;
-  padding: 0;
+.gallery {
+  display: flex;
 }
-.header-text {
-  padding: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 96px;
-  font-weight: 700;
-  background: linear-gradient(45deg, yellow, red );
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+.image {
+  width: 200px;
+  height: 200px;
+  margin: 16px;
+  border: 1px dotted grey;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 
 }
