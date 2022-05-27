@@ -29,3 +29,6 @@
 .invert {
   filter: invert(100%)
 }
+.text {
+  line-height: 30px;
+}
