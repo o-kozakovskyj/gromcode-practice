@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
 }
@@ -14,7 +14,6 @@
   display: flex;
 }
 .card {
-  line-height: 30px;
   text-align: center;
   text-transform: lowercase;
   margin: 16px;
