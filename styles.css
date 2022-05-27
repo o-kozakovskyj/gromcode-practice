@@ -1,18 +1,4 @@
-*{
-  margin: 0;
-}
-.gallery {
-  display: flex;
-
-}
-.image {
-  box-sizing: border-box;
-  width: 200px;
-  height: 200px;
-  margin: 16px;
-  border: 1px dotted grey;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+body {
+  background-image: url(https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson+13/hw2/background.jpg);
 
 }
