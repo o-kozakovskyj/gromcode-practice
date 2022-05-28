@@ -1,5 +1,6 @@
 div {
   margin: 16px;
+  box-sizing: border-box;
 }
 input {
   display: inline-block;
