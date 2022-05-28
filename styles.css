@@ -9,7 +9,7 @@ button {
   display: block;
   margin-top: 16px;
 }
-input[type="textarea"] {
+textarea[name="description"] {
   margin-top: 16px;
   display: block;
 }
