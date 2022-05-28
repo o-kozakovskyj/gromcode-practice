@@ -1,6 +1,9 @@
 .page {
   margin: 32px;
 }
+input {
+  padding: 0;
+}
 div {
   box-sizing: border-box;
   margin-bottom: 8px;
