@@ -13,13 +13,37 @@
   </head>
 
   <body>
-    <div class="image-container">
-      <img
-        class="image"
-        src="https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson15/hw1/big.jpeg"
-        alt="Forest"
-      />
-      <span class="image-button">Later I'll do something</span>
+    <form>
+      <div class="text-input">
+        <input type="text" name="lastName" value="Emerson">
+      </div>
+      <div class="number-input">
+        <input type="number" name="age" value="17">
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" name="agree" id="agreement">
+        <label for="agreement">Accept terms and conditions</label>
+      </div>
+      <div class="choose-gender">
+       
+        <label class="radio">
+          <input type="radio" name="gender">
+          Male
+        </label>
+        <label class="radio">
+          <input type="radio" name="gender">
+          Female
+        </label>
+        <label class="radio">
+          <input type="radio" name="gender">
+          Secret
+        </label>
+        <input type="textarea" name="description" value="Write description...">
+        <button type="submit" name="submit">Submit</button>
+      </div>
+    </form>
+    
+
     </div>
   </body>
 </html>
