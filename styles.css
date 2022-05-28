@@ -7,7 +7,7 @@ input {
 }
 
 textarea[name="description"] {
-  padding: 0;
+  padding-bottom: 0;
   margin-top: 16px;
   display: block;
 
