@@ -5,11 +5,6 @@ div {
 input {
   display: inline-block;
 }
-
-textarea[name="description"] {
-  display: block;
-
-}
 button {
 margin-top: 5px;
 }
