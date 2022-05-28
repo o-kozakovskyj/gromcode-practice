@@ -4,14 +4,12 @@ div {
 input {
   display: inline-block;
 }
-.radio  {
 
-  display: block;
-}
 button {
   display: block;
   margin-top: 16px;
 }
 input[type="textarea"] {
   margin-top: 16px;
+  display: block;
 }
