@@ -5,6 +5,9 @@
   display: flex;
   box-sizing: border-box;
 }
+label {
+  margin: 0;
+}
 .login-form {
   box-sizing: border-box;
   background-color: aqua;
