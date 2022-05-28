@@ -9,7 +9,7 @@ input {
 textarea[name="description"] {
   margin-top: 16px;
   display: block;
-  line-height: 13px;
+  line-height: 16px;
 }
 button {
 margin-top: 5px;
