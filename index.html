@@ -17,13 +17,13 @@
   <body class="page">
     <form>
       <div>
-        <input type="text" name="primaryLanguage" value="HTML" disabled/>
+        <input type="text" name="primaryLanguage" value="HTML" disabled />
       </div>
       <div>
         <input type="checkbox" name="agree" unchecked />
       </div>
       <div>
-        <input type="checkbox" name="like" checked/>
+        <input type="checkbox" name="like" checked />
       </div>
       <div>
         <input type="color" name="favouriteColor" value="#ff7f50" />
@@ -67,14 +67,17 @@
         <input type="password" name="password" value="secret" />
       </div>
       <div class="languages">
-        <label>
-          <input type="radio" name="language" value="html" />
-          HTML
-          <input type="radio" name="language" checked value="css" />
-          CSS
-          <input type="radio" name="language" value="javascript" />
-          JavaScript
-        </label>
+        <input type="radio" name="language" value="html" id="html" />
+        <label for="html">HTML</label>
+        <input type="radio" name="language" checked value="css" id="css" />
+        <label for="css">CSS</label>
+        <input
+          type="radio"
+          name="language"
+          value="javascript"
+          id="javascript"
+        />
+        <label for="javascript">JavaScript</label>
       </div>
       <div>
         <input type="range" name="learningProgress" value="30" />
@@ -105,13 +108,11 @@
         />
       </div>
       <div>
-        <input type="week" name="birthWeek" value="2021-W51">
+        <input type="week" name="birthWeek" value="2021-W51" />
       </div>
       <div>
         <button type="submit">Save</button>
       </div>
-      
     </form>
   </body>
 </html>
-
