@@ -4,6 +4,14 @@
   box-sizing: border-box;
   display: block;
 }
-div {
-  margin: 8px; 
+div{
+  margin: 0;
+}
+
+input,
+button,
+.languages,
+textarea {
+  box-sizing: border-box;
+  margin: 8px;
 }
