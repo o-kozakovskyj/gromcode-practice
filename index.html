@@ -68,25 +68,17 @@
         <input type="password" name="password" value="secret" />
       </div>
       <div class="languages">
-        <label>
-          <input type="radio" name="language" value="html" />
-          HTML
-        </label>
-
-        <label>
-          <input type="radio" name="language" checked value="css" id="css" />
-          CSS
-        </label>
-
-        <label>
+          <input type="radio" name="language" id="html"/>
+          <label for="html"> HTML</label>        
+        
+          <input type="radio" name="language" checked id="css" id="css" />
+          <label for="css"> CSS</label>   
           <input
             type="radio"
             name="language"
-            value="javascript"
             id="javascript"
           />
-          JavaScript
-        </label>
+          <label for="javascript">JavaScript</label>  
       </div>
       <div class="page__input">
         <input type="range" name="learningProgress" value="30" />
