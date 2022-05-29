@@ -6,6 +6,7 @@
 }
 div {
   box-sizing: border-box;
+  margin: 8px;
   
 }
 textarea {
@@ -13,7 +14,4 @@ textarea {
 }
 input {
   box-sizing: border-box;
-}
-input {
-  margin: 8px;
 }
