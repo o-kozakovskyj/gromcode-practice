@@ -3,6 +3,9 @@
   margin: 32px;
   box-sizing: border-box;
 }
+.languages input {
+  margin: 0;
+}
 
 .page__input,
 .languages {
