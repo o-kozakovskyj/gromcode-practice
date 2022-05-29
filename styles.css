@@ -2,12 +2,16 @@
 .page {
   margin: 32px;
   box-sizing: border-box;
+  display: flex;
 }
 
-input,
+/* input,
 button,
 .languages,
 .textarea,
 select {
+  margin: 8px;
+} */
+div {
   margin: 8px;
 }
