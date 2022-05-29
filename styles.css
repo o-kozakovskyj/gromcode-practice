@@ -17,3 +17,7 @@ input {
 .languages input {
  margin: 0;
 }
+input[type="checkbox"] {
+  display: block;
+  margin-bottom: 8px;
+}
