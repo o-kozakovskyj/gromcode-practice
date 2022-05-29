@@ -2,15 +2,12 @@
 .page {
   margin: 32px;
   box-sizing: border-box;
-  display: block;
-}
-div{
-  margin: 0;
 }
 
 input,
 button,
 .languages,
-textarea {
+.textarea,
+select {
   margin: 8px;
 }
