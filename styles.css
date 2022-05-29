@@ -2,14 +2,8 @@
 .page {
   margin: 32px;
   box-sizing: border-box;
-  display: flex;
 }
 
-input[type="checkbox"] {
-  margin: 0;
-  width: 12px;
-  line-height: 12px;
-}
 div {
   margin: 8px;
 }
