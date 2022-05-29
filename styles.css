@@ -14,3 +14,6 @@ textarea {
 input {
   box-sizing: border-box;
 }
+.languages:nth-child(2){
+  margin: 0;
+}
