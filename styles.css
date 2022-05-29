@@ -5,13 +5,11 @@
   display: flex;
 }
 
-/* input,
-button,
-.languages,
-.textarea,
-select {
-  margin: 8px;
-} */
+input[type="checkbox"] {
+  margin: 0;
+  width: 12px;
+  line-height: 12px;
+}
 div {
   margin: 8px;
 }
