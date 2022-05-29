@@ -14,6 +14,6 @@ textarea {
 input {
   box-sizing: border-box;
 }
-/* .languages input {
+.languages input {
  margin: 0;
-} */
+}
