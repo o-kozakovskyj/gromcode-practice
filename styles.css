@@ -1,11 +1,16 @@
 
 .page {
   margin: 32px;
+  box-sizing: border-box;
+  display: block;
 }
 div {
   box-sizing: border-box;
   margin-bottom: 8px;
 }
 textarea {
+  box-sizing: border-box;
+}
+input {
   box-sizing: border-box;
 }
