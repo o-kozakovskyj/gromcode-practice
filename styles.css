@@ -5,13 +5,5 @@
   display: block;
 }
 div {
-  box-sizing: border-box;
-  margin: 8px;
-  
-}
-textarea {
-  box-sizing: border-box;
-}
-input {
-  box-sizing: border-box;
+  margin: 8px; 
 }
