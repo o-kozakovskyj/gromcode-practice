@@ -6,9 +6,9 @@
 /* .languages input {
   margin: 0;
 } */
-input[type="radio"] {
-  margin-right: 2px;
-}
+/* input[type="radio"] {
+  
+} */
 .page__input,
 .languages {
   margin: 8px;
