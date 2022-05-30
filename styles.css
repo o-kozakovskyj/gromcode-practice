@@ -7,7 +7,7 @@
   margin: 0;
 } */
 input[type="radio"] {
-  margin-right: 8px;
+  margin-right: 4px;
 }
 .page__input,
 .languages {
