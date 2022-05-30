@@ -7,10 +7,13 @@
   margin: 0;
 } */
 .languages {
- 
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  margin-left: 4px;
+}
+.languages input {
+  margin: 0 4px;
 }
 .page__input,
 .languages {
