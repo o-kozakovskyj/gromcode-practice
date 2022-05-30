@@ -6,7 +6,9 @@
 /* .languages input {
   margin: 0;
 } */
-
+input[type="radio"] {
+  margin-right: 8px;
+}
 .page__input,
 .languages {
   margin: 8px;
