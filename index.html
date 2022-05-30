@@ -14,48 +14,48 @@
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body class="page">
+  <body>
     <form>
-      <div class="page__input">
+      <div>
         <input type="text" name="primaryLanguage" value="HTML" disabled />
       </div>
-      <div class="page__input">
+      <div>
         <input type="checkbox" name="agree" unchecked />
       </div>
-      <div class="page__input">
+      <div>
         <input type="checkbox" name="like" checked />
       </div>
-      <div class="page__input">
+      <div>
         <input type="color" name="favouriteColor" value="#ff7f50" />
       </div>
-      <div class="page__input">
+      <div>
         <input type="date" name="birthDate" value="2021-01-02" />
       </div>
-      <div class="page__input">
+      <div>
         <input
           type="datetime-local"
           name="birthTime"
           value="2024-10-04T13:02"
         />
-      </div class="page__input">
-      <div class="page__input">
+      </div>
+      <div>
         <input
           type="email"
           name="email"
           placeholder="example@domain.com"
           required
         />
-      </div class="page__input">
-      <div class="page__input">
+      </div>
+      <div>
         <input type="file" name="avatar" />
       </div>
-      <div class="page__input">
+      <div>
         <input type="month" name="startLearning" value="2020-01" />
       </div>
-      <div class="page__input">
+      <div>
         <input type="number" name="favoriteNumber" value="17" />
       </div>
-      <div class="page__input">
+      <div>
         <textarea
         class="textarea"
           name="story"
@@ -63,39 +63,39 @@
           rows="5"
           placeholder="A long time ago..."
         ></textarea>
-      </div class="page__input">
-      <div class="page__input">
+      </div>
+      <div>
         <input type="password" name="password" value="secret" />
       </div>
       <div class="languages">
-          <input type="radio" name="language" value="html">
-          HTML
-          <input type="radio" name="language" checked value="css">
-          CSS
-          <input type="radio" name="language" value="javascript">
-          JavaScript
+        <input name="language" value="html" type="radio" id="html" />
+        <label for="html">HTML</label>
+        <input name="language" value="css" type="radio" checked id="css" />
+        <label for="css">CSS</label>
+        <input name="language" value="javascript" type="radio" id="javascript" />
+        <label for="javascript">JavaScript</label>
       </div>
-      <div class="page__input">
+      <div>
         <input type="range" name="learningProgress" value="30" />
       </div>
-      <div class="page__input">
+      <div>
         <select name="framework">
           <option value="react">React</option>
           <option value="jquery" selected>jQuery</option>
           <option value="bootstrap">Bootstrap</option>
         </select>
       </div>
-      <div class="page__input">
+      <div>
         <input
           type="search"
           name="search"
           placeholder="Type first letters..."
         />
       </div>
-      <div class="page__input">
+      <div>
         <input type="time" name="lunchEnd" value="14:01" />
       </div>
-      <div class="page__input">
+      <div>
         <input
           type="website"
           name="website"
@@ -103,10 +103,10 @@
           required
         />
       </div>
-      <div class="page__input">
+      <div>
         <input type="week" name="birthWeek" value="2021-W51" />
       </div>
-      <div class="page__input">
+      <div>
         <button type="submit">Save</button>
       </div>
     </form>

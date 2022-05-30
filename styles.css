@@ -1,23 +1,9 @@
-
-.page {
-  margin: 32px;
+* {
   box-sizing: border-box;
 }
-
-.languages {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  
+form {
+  margin: 32px;
 }
-.languages input {
-  margin: 0 4px;
-}
-.languages >input:first-child {
-  margin: 0 4px 0 0;
-}
-
-.page__input,
-.languages {
+div {
   margin: 8px;
 }
