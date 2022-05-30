@@ -6,9 +6,12 @@
 /* .languages input {
   margin: 0;
 } */
-/* input[type="radio"] {
-  
-} */
+.languages {
+ 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .page__input,
 .languages {
   margin: 8px;
