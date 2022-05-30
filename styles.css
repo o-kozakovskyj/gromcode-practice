@@ -8,13 +8,13 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  
+  font-size: 13px;
 }
 .languages input {
-  margin: 0 2px;
+  margin: 0 4px;
 }
 .languages >input:first-child {
-  margin: 0 2px 0 0;
+  margin: 0 4px 0 0;
 }
 
 .page__input,
