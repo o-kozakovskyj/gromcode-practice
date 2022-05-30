@@ -3,10 +3,7 @@
   margin: 32px;
   box-sizing: border-box;
 }
-input,
-textarea,
-button,
-select {
+input[type="checkbox"] {
   margin: 0;
   padding: 0;
 }
@@ -15,6 +12,8 @@ select {
   align-items: center;
   justify-content: flex-start;
   margin-left: 4px;
+  font-size: 14px;
+  flex-shrink: 1;
 }
 .languages input {
   margin: 0 4px;
