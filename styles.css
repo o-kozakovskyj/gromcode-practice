@@ -3,11 +3,11 @@
   margin: 32px;
   box-sizing: border-box;
 }
-.languages input {
+/* .languages input {
   margin: 0;
-}
+} */
 
-/* .page__input,
+.page__input,
 .languages {
   margin: 8px;
-} */
+}
