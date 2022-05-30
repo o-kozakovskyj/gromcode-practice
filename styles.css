@@ -3,9 +3,13 @@
   margin: 32px;
   box-sizing: border-box;
 }
-/* .languages input {
+input,
+textarea,
+button,
+select {
   margin: 0;
-} */
+  padding: 0;
+}
 .languages {
   display: flex;
   align-items: center;
@@ -14,6 +18,9 @@
 }
 .languages input {
   margin: 0 4px;
+}
+.languages >input:first-child {
+  margin: 0 4px 0 0;
 }
 .page__input,
 .languages {
