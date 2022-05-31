@@ -21,7 +21,7 @@
   line-height: 100px;
   background-color: coral;
   border-radius: 10px;
-  animation: move 2s ease 3 alternate ;
+  animation: move 2s ease alternate ;
   animation-fill-mode: forwards;
   
 }
