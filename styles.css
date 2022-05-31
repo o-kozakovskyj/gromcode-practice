@@ -17,7 +17,7 @@
   height: 100px;
   position: relative;
   left: calc(50vw - 125px);
-  top:calc(50vh - 50px);
+  top: -100px;
   line-height: 100px;
   background-color: coral;
   border-radius: 10px;
@@ -27,6 +27,7 @@
 }
 
 @keyframes move {
-  0% {top: calc(50vh - 50px)}
-  100% {top: -100px}
+  0% {top: -100px}
+  100%{top: calc(50vh - 50px)}
+  
 }
