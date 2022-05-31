@@ -13,12 +13,14 @@
   border-top-color: black;
   margin-bottom: 8px;
   animation: border infinite linear 2s;
+  margin: auto;
 }
 .spinner {
   margin: auto;
   font-family: monospace, sans-serif;
   font-size: 16px;
   text-transform: uppercase;
+  
 }
 .spinner-text {
   animation: opacity infinite linear 2s;
