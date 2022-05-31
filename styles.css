@@ -18,7 +18,7 @@
   animation-fill-mode: forwards;
   position: absolute;
   left: calc(50vw - 125px);
-  top: calc(50vh - 50px);
+  top: calc(50vh - 100px);
 }
 
 @keyframes move {
