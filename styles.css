@@ -15,7 +15,7 @@
   text-align: center;
   width: 250px;
   height: 100px;
-  position: absolute;
+  position: relative;
   left: calc(50vw - 125px);
   top:0;
   line-height: 100px;
