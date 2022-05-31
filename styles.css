@@ -1,35 +1,36 @@
 * {
   box-sizing: border-box;
 }
-.container {
-  margin: 32px;
-}
-.rect {
-  margin-bottom: 16px;
-  background-color: coral;
-  opacity: 0.5;
-  text-align: center;
+.square {
   width: 100px;
   height: 100px;
-  line-height: 100px;
+  background-color: coral;
+  position: absolute;
+  animation: move 4s 2  alternate;
+
 }
-.linear {
-  transition: width 2s linear, 
-              opacity 0.5s linear;
-}
-.ease {
-  transition: width 2s ease, 
-              opacity 0.5s ease;
-}
-.ease-in {
-  transition: width 2s ease-in, 
-              opacity 0.5s ease-in;
-}
-.ease-in-out {
-  transition: width 2s ease-in-out, 
-              opacity 0.5s ease-in-out;
-}
-.rect:hover {
-  width: 100%;
-  opacity: 1;
+@keyframes move {
+  0% {
+top:0;
+left: 0;
+  }
+  25% {
+    top: 0;
+    left: 300px;
+    background-color: cornflowerblue;
+  }
+  50% {
+    top: 300px;
+    left: 300px;
+    background-color: aqua;
+  }
+  75% {
+    top:300px;
+    left: 0;
+    background-color: yellowgreen;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
 }
