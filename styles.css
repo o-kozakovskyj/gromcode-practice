@@ -21,8 +21,9 @@ body {
   animation-fill-mode: backwards;
   position: absolute;
   left: calc(50vw - 125px);
+  top: calc(50vh - 50px);
 }
 @keyframes move {
   from {top: -100px}
-  to{top: calc(50vh- 50px)}
+  to {top: calc(50vh- 50px)}
 }
