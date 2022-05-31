@@ -41,8 +41,8 @@
   100%{opacity: 0;}
 }
 @keyframes border {
-  0%{border-color: lightgrey; border-top: black;}
-  25%{border-color: lightgrey; border-right: black;}
-  50%{border-color: lightgrey; border-bottom: black;}
-  100%{border-color: lightgrey; border-left: black;}
+  0%{transform: rotate(0);}
+  25%{transform: rotate(90deg)}
+  50%{transform: rotate(180deg);}
+  100%{transform: rotate(360deg);}
 }
