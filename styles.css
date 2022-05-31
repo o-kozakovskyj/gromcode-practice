@@ -17,17 +17,16 @@
   height: 100px;
   position: relative;
   left: calc(50vw - 125px);
-  top:0;
+  top:calc(50vh - 50px);
   line-height: 100px;
   background-color: coral;
   border-radius: 10px;
-  animation: move 2s ease 1 alternate ;
+  animation: move 2s ease alternate ;
   animation-fill-mode: forwards;
   
 }
 
 @keyframes move {
-  0% {top: 0;}
-  25% {top: calc(50vh - 50px)}
-  100% {top:-100px}
+  0% {top: calc(50vh - 50px)}
+  100% {top: -100px}
 }
