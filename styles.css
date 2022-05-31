@@ -18,7 +18,7 @@
   animation-fill-mode: backwards;
   position: absolute;
   left: calc(50vw - 125px);
-  top: calc(50vh);
+  top: calc(50vh + 10px);
 }
 @keyframes move {
   from {top: -100px}
