@@ -1,6 +1,27 @@
 * {
   box-sizing: border-box;
 }
+@keyframes moving {
+  from {
+    left: 0;
+    opacity: 1;
+  }
+  to {
+    left: 70px;
+  }
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .container {
   width: 100vw;
   height: 100vh;
@@ -12,33 +33,23 @@
   text-transform: uppercase;
 }
 .rect {
+  position: absolute;
   width: 10px;
   height: 4px;
   background-color: black;
   border-radius: 2px;
-  animation: mooving 2s linear 2s infinite alternate, blinking  2s ease infinite;
+  bottom: -2px;
+  animation: moving 2s linear 2s infinite alternate, 
+             blinking  2s ease infinite;
 }
 .spinner {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .spinner-text {
   animation: blinking  2s ease infinite;
   transition: all 2s;
-}
-@keyframes blinking {
-  0%{color: rgba(0, 0, 0, 0); opacity: 0;}
-  25%{color: rgba(0, 0, 0, 0.25); opacity: 0.25}
-  50%{color: rgba(0, 0, 0, 0.5); opacity: 0.5}
-  75%{color: rgba(0, 0, 0, 0.75); opacity: 0.75}
-  100%{color: rgba(0, 0, 0, 1); opacity: 1}
-}
-@keyframes mooving {
-  0%{transform: translateX(5px)}
-  25%{transform: translateX(10px)}
-  50%{transform: translateX(20px)}
-  75%{transform: translateX(30px)}
-  100%{transform: translateX(40px)}
 }
