@@ -1,0 +1,17 @@
+eslint-plugin-prettier
+no-var
+eslint-plugin-prettier
+eqeqeq
+no-undef
+eslint-plugin-prettier
+eslint-plugin-prettier
+eslint-plugin-prettier
+no-plusplus
+eslint-plugin-prettier
+eslint-plugin-prettier
+eslint-plugin-prettier
+eslint-plugin-prettier
+no-return-assign
+no-return-assign
+eslint-plugin-prettier
+eslint-plugin-prettier
