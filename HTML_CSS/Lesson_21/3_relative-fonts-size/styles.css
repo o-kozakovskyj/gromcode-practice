@@ -41,9 +41,9 @@ body {
 .nav-list-item {
   color: white;
   background-color: #808080;
-  line-height: 2em;
   margin-bottom: 0.5em;
   overflow: hidden;
+   line-height: 2em;
   white-space: nowrap;
   text-overflow: ellipsis;
   
@@ -54,6 +54,9 @@ body {
   width: 100%;
   padding: 0 0.5em;
   text-decoration: none;
+ 
+ 
+  
   
 }
 .section {
