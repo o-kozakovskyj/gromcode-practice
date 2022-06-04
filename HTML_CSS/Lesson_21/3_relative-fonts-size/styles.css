@@ -27,8 +27,8 @@ body {
 }
 .main {
   display: flex;
-  font-size: 1.25em;
   flex: 1 0;
+  flex-wrap: wrap;
 }
 .navigation {
   width: 20%;
@@ -44,7 +44,7 @@ body {
   background-color: #808080;
   margin-bottom: 0.5em;
   overflow: hidden;
-   line-height: 2em;
+  line-height: 2em;
   white-space: nowrap;
   text-overflow: ellipsis;
   
