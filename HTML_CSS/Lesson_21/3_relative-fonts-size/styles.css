@@ -5,14 +5,13 @@ html {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #555;
   font-size: 16px;
+  height: 100%;
 
 }
 body {
   display: flex;
-  
+  height: 100%;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
 }
 .header {
   color: white;
@@ -23,11 +22,14 @@ body {
   background-color: #e5e5e5;
   padding: 0.5em;
   text-align: center;
+  
+  
 }
 .main {
   display: flex;
   font-size: 1.25em;
   flex-wrap: wrap;
+  flex: 1 0;
 }
 .navigation {
   width: 20%;
