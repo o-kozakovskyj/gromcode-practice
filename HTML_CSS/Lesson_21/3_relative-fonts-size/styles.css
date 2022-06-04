@@ -28,7 +28,6 @@ body {
 .main {
   display: flex;
   font-size: 1.25em;
-  flex-wrap: wrap;
   flex: 1 0;
 }
 .navigation {
