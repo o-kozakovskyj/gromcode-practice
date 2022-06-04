@@ -33,31 +33,29 @@ body {
 .navigation {
   width: 20%;
   padding: 0.5em;
+ 
 }
 .nav-list {
   padding: 0;
   list-style: none;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  
 }
 .nav-list-item {
   color: white;
   background-color: #808080;
   margin-bottom: 0.5em;
-  line-height: 2em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: inline-block;
-  
+ 
 }
 
 .nav-list-link {
   color: white;
-  padding: 0 0.5em;
+  padding: 0 0.6em 0 0.5em;
   text-decoration: none;
   overflow: hidden;
+  line-height: 2em;
   
 }
 .section {
