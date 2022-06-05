@@ -38,25 +38,28 @@ body {
 .nav-list {
   padding: 0;
   list-style: none;
-  
+ 
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .nav-list-item {
   color: white;
   background-color: #808080;
   margin-bottom: 0.5em;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  display: flex;
+  
  
 }
 
 .nav-list-link {
   color: white;
-  padding: 0 0.7em 0 0.5em;
+  padding: 0 0.5em;
   text-decoration: none;
-  overflow: hidden;
   line-height: 2em;
-  
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
 }
 .section {
   width: 60%;
