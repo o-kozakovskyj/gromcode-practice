@@ -65,6 +65,7 @@ body {
 .news {
   width: 100%;
   padding: 0.5em;
+  flex: 1 0;
 }
 .units-list {
   line-height: 1.75em;
