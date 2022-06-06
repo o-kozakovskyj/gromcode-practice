@@ -63,10 +63,12 @@ body {
   width: 100%;
   padding: 0.5em;
   font-size: 1.25em;
+  flex: 1 1;
 }
 .news {
   width: 100%;
   padding: 0.5em;
+  flex: 1 1;
 }
 .units-list {
   line-height: 1.75em;
