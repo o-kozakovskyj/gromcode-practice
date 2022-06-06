@@ -5,7 +5,7 @@ html {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #555;
   font-size: 16px;
-  height: 100vh;
+  height: 100%;
 
 }
 body {
@@ -23,14 +23,12 @@ body {
   padding: 0.5em;
   text-align: center;
   
-  
 }
 .main {
   display: flex;
   flex-direction: column;
   flex: 1 0;
 }
-
 .navigation {
   width: 100%;
   padding: 0.5em;
@@ -63,12 +61,10 @@ body {
   width: 100%;
   padding: 0.5em;
   font-size: 1.25em;
-  flex: 1 1;
 }
 .news {
   width: 100%;
   padding: 0.5em;
-  flex: 1 1;
 }
 .units-list {
   line-height: 1.75em;

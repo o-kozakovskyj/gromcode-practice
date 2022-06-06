@@ -5,8 +5,6 @@ html {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #555;
   font-size: 16px;
-  height: 100%;
-
 }
 body {
   display: flex;
@@ -27,7 +25,7 @@ body {
 }
 .main {
   display: flex;
-  flex: 1 0;
+  flex: 1 1;
   flex-wrap: wrap;
 }
 .navigation {
