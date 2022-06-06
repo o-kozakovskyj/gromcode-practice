@@ -1,0 +1,12 @@
+.main {
+  display: flex;
+  justify-content: center;
+}
+.picture {
+ 
+  justify-content: center;
+}
+image {
+ 
+  max-width: 100%;
+}
