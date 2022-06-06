@@ -1,12 +1,9 @@
 .main {
   display: flex;
   justify-content: center;
+  
 }
-.picture {
- 
-  justify-content: center;
-}
-image {
- 
+
+img {
   max-width: 100%;
 }
