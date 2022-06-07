@@ -19,8 +19,6 @@ $cxl: #c47;
 }
 @mixin position {
   @media screen and (orientation: landscape) {
-    .container {
-      display: flex;
-    }
+    @content;
   }
 }

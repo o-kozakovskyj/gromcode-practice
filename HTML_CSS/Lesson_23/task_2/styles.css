@@ -13,7 +13,10 @@ body {
   width: 100px;
   height: 100px;
   background-color: #ff7f50;
-  margin: 8px;
+  margin-bottom: 16px;
+}
+.square:last-child {
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 600px) {
@@ -34,6 +37,9 @@ body {
 @media screen and (orientation: landscape) {
   .container {
     display: flex;
+  }
+  .square {
+    margin: 8px;
   }
 }
 
