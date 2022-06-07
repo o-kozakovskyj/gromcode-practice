@@ -1,0 +1,26 @@
+$cm:#8a2be2;
+$cl: #a61;
+$cxl: #c47;
+
+@mixin middle-width {
+  @media screen and (min-width:600px){
+    @content;
+  }
+}
+@mixin large-width {
+  @media screen and (min-width: 900px){
+    @content;
+  }
+}
+@mixin extra-large-width {
+  @media screen and (min-width: 1200px){
+    @content;
+  }
+}
+@mixin position {
+  @media screen and (orientation: landscape) {
+    .container {
+      display: flex;
+    }
+  }
+}
