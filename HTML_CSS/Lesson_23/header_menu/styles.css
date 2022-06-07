@@ -4,6 +4,7 @@
 }
 
 .menu {
+  padding: 0;
   color: white;
   height: 3em;
   cursor: pointer;
