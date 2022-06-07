@@ -1,0 +1,49 @@
+span {
+  background-color: #faebd7;
+  margin: auto;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.nav {
+  background-color: #ff7f50;
+  min-height: 200px;
+  display: flex;
+  flex: 1 1;
+}
+
+.list {
+  background-color: #006400;
+  min-height: 200px;
+  display: flex;
+  flex: 1 1;
+}
+
+.news {
+  background-color: #0ff;
+  min-height: 200px;
+  display: flex;
+  flex: 1 1;
+}
+
+main {
+  flex: 2 2;
+}
+
+@media screen and (min-width: 600px) {
+  .main {
+    display: flex;
+    flex: 2 2;
+  }
+}
+@media (min-width: 900px) {
+  .container {
+    display: flex;
+  }
+}
+html {
+  text-transform: lowercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */
