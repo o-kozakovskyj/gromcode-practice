@@ -1,5 +1,7 @@
 const getMessagesForBestStudents = (allStudentsList, studentsForRetake) => {
-  return allStudentsList.filter(student => !studentsForRetake.includes(student)).map(student => 'Good job, ' + student)
+  return allStudentsList
+    .filter((student) => !studentsForRetake.includes(student))
+    .map((student) => 'Good job, ' + student);
 };
 
 // examples
