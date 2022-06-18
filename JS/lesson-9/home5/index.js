@@ -1,19 +1,19 @@
-/* eslint-disable no-restricted-syntax */
-
-/* Для решения этой задачи используй for..in цикл. В реальных проектах это плохая практика,
- * лучше использовать методы класса Object - keys(), values(), entries(). Но мы с ними пока не познакомитись.
- * Чтобы eslint не ругался на эту ошибку, для этой задачи он отключен аннотацией eslint-disable
- * */
-
-const getAdults = (obj) => {
-  const adultPerson = {};
-  Object.keys(obj)
-    .filter((key) => obj[key] >= 18)
-    // eslint-disable-next-line no-return-assign
-    .forEach((key) => (adultPerson[key] = obj[key]));
-  return adultPerson;
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-return-assign */
+const getTotalRevenue = (transactions) => {
+  const sum = [];
+  transactions.forEach((element) => {
+    sum.push(element.amount);
+  });
+  return sum.reduce((acc, amount) => (acc += amount));
 };
 
 // examples
-console.log(getAdults({ 'John Doe': 19, Tom: 17, Bob: 18 })); // ==> { 'John Doe': 19, Bob: 18 }
-console.log(getAdults({ Ann: 56, Andrey: 7 })); // ==> { Ann: 56 }
+const dayTransactions = [
+  { userId: 22, amount: 60, operation: 'sell' },
+  { userId: 22, amount: 160, operation: 'buy' },
+  { userId: 44, amount: 90, operation: 'sell' },
+];
+
+const result = getTotalRevenue(dayTransactions); // ==> 310
+console.log(result);

@@ -1,5 +1,5 @@
 function squareArray(numbers) {
- if (!Array.isArray(numbers)) {
+  if (!Array.isArray(numbers)) {
     return null;
   }
   return numbers.map(number => number * number);

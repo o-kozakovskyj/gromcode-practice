@@ -1,18 +1,40 @@
-/* eslint-disable no-restricted-syntax */
-/* eslint-disable guard-for-in */
+/* eslint-disable prefer-object-spread */
 
-/* Для решения этой задачи используй for..in цикл. В реальных проектах это плохая практика,
- * лучше использовать методы класса Object - keys(), values(), entries(). Но мы с ними пока не познакомитись.
- * Чтобы eslint не ругался на эту ошибку, для этой задачи он отключен аннотацией eslint-disable
+/* В решения этой задачи используется метод Object.assign. В реальных проектах для такой задачи
+ * лучше использовать spread опертор - это самый современный подход
+ *
+ * Задачу мы делаем для практики и демонстрационных целей, поэтому чтобы eslint не ругался на эту ошибку,
+ * для этой задачи он отключен аннотацией eslint-disable
  * */
 
-function getKeys(obj) {
-  for (const key in obj) {
-    console.log(key);
-  }
+function mergeObjectsV1(obj1, obj2) {
+  return Object.assign(obj1, obj2);
 }
-const user = {
+
+function mergeObjectsV2(obj1, obj2) {
+  return Object.assign(obj2, obj1);
+}
+
+function mergeObjectsV3(obj1, obj2) {
+  return { ...obj1, ...obj2 };
+}
+
+function mergeObjectsV4(obj1, obj2) {
+  return { ...obj2, ...obj1 };
+}
+
+// examples
+const obj1 = {
   name: 'Tom',
   age: 17,
 };
-getKeys(user);
+
+const obj2 = {
+  name: 'Bob',
+  student: false,
+};
+
+console.log(mergeObjectsV1(obj1, obj2)); // ==> { name: 'Bob', age: 17, student: false }
+console.log(mergeObjectsV2(obj1, obj2)); // ==> { name: 'Tom', age: 17, student: false }
+console.log(mergeObjectsV3(obj1, obj2)); // ==> { name: 'Bob', age: 17, student: false }
+console.log(mergeObjectsV4(obj1, obj2)); // ==> { name: 'Tom', age: 17, student: false }

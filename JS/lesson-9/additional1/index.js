@@ -1,32 +1,38 @@
-/* eslint-disable dot-notation */
+/* eslint-disable prefer-object-spread */
+/* eslint-disable no-param-reassign */
 
-/**
- * Для решения этой задачи нужно использовать как квадратные скобки так и точки для чтения свойства объекта. В реальных проектах
- * более предпочтительный вариант - обращение через точку. Но нам нужно научиться работать со всеми опциями.
- * Чтобы eslint не ругался на эту ошибку, для этой задачи он отключен аннотацией eslint-disable
- */
+/* В решения этой задачи используется метод Object.assign. В реальных проектах для такой задачи
+ * лучше использовать spread опертор - это самый современный подход
+ *
+ * Так же плохой подход - мутировать входящие параметры функции
+ *
+ * Задачу мы делаем для практики и демонстрационных целей, поэтому чтобы eslint не ругался на эту ошибку,
+ * для этой задачи он отключен аннотацией eslint-disable
+ * */
 
+function addPropertyV1(obj, key, value) {
+  obj[key] = value;
+  return obj;
+}
+
+function addPropertyV2(obj, key, value) {
+  Object.assign(obj, { [key]: value });
+  return obj;
+}
+
+function addPropertyV3(obj, key, value) {
+  return Object.assign({}, { [key]: value }, obj);
+}
+
+function addPropertyV4(obj, key, value) {
+  return { [key]: value, ...obj };
+}
+
+// examples
 const transaction = {
-  currency: 'USD',
   value: 170,
-  operation: 'sale',
-  agent: {
-    country: 'Ukraine',
-    company: 'NYSE',
-  },
-  'operation time': 1584029990001,
 };
-
-/* 1. Выведи в консоль значение свойства 'currency' с помощью точки */
-console.log(transaction.currency);
-/* 2. Выведи в консоль значение свойства 'value' с помощью квадратных скобок */
-console.log(transaction['value']);
-const key = 'operation';
-/* 3. Выведи в консоль значение свойства обьекта transaction, название которого находится в переменной key - используй квадратные скобки */
-console.log(transaction[key]);
-/* 4. Введи в консоль значение свойства 'company' используя квадратные скобки */
-console.log(transaction.agent['company']);
-/* 5. Выведи в консоль значение свойства 'country' используя точку */
-console.log(transaction.agent.country);
-/* 6. Выведи в консоль значение свойства 'operation time' используя квадратные скобки */
-console.log(transaction['operation time']);
+console.log(addPropertyV1(transaction, 'currency', 'USD')); // ==> { value: 170, currency: 'USD' }
+console.log(addPropertyV2(transaction, 'currency', 'USD')); // ==> { value: 170, currency: 'USD' }
+console.log(addPropertyV3(transaction, 'currency', 'USD')); // ==> { value: 170, currency: 'USD' }
+console.log(addPropertyV4(transaction, 'currency', 'USD')); // ==> { value: 170, currency: 'USD' }
