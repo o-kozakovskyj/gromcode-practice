@@ -6,5 +6,5 @@ function cleanTransactionsList(arr) {
 }
 
 console.log(
-  cleanTransactionsList([12.9, '  45.666  ', 13, '  2w  ', 1, 'dol', '45r'])
+  cleanTransactionsList([12.9, '  45.666  ', 13, '  2w5  ', 1, '4dol', '45r'])
 );
