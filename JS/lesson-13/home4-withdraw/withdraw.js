@@ -1,4 +1,4 @@
-const withdraw = (clients, balances, client, amount) => {
+export const withdraw = (clients, balances, client, amount) => {
   let clientBalance = balances[clients.indexOf(client)];
   if (clientBalance >= amount) {
     clientBalance -= amount;
