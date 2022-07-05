@@ -1,20 +1,21 @@
-/* eslint-disable no-param-reassign */
+//alg
+// bind input: func, context, arg for func(unnesessary)
+// output: function binded with object
+// //
+function.bind = function(func, context, ...args) {
+ 
+  return function () {
+ return func.apply(context, [...args]);
+  }
 
-/**
- * @param {string[]} keysList
- * @param {array} valuesList
- * @return {object}
- */
-function buildObject(keysList, valuesList) {
-  // eslint-disable-next-line no-return-assign
-  const res = {};
-  // eslint-disable-next-line no-return-assign
-  keysList.forEach((key, index) => (res[key] = valuesList[index]));
-  return res;
 }
-
-// examples
-const keys = ['name', 'address', 'age'];
-const values = ['Bob', 'Ukraine', 34];
-const result = buildObject(keys, values); // ==> { name: 'Bob', address: 'Ukraine', age: 34 }
-console.log(result);
+const su =  {
+  age: 18,
+  getAge() {
+    return this.age
+  }
+}
+console.log(su.getAge(32))
+const getAger = su.getAge;
+const bindedAge = getAger.bind(su.getAge,su);
+console.log(bindedAge())
