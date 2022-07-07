@@ -3,5 +3,5 @@ const titleElem = document.querySelector('.title');
 titleElem.textContent = text;
 
 }
-console.dir(setTitle('text'));
+// console.dir(setTitle('text'));
 
