@@ -1,6 +1,7 @@
 export function setTitle(text) {
-document.querySelector('.title').textContent = text;
-  
+const titleElem = document.querySelector('.title');
+titleElem.textContent = text;
+return titleElem.textContent
 }
-setTitle('BU-Ga-GA');
+console.dir(setTitle('BU-Ga-GA'));
 setTitle('VAY');
