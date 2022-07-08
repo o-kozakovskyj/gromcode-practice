@@ -1,7 +1,7 @@
-export function setTitle(text) {
-const titleElem = document.querySelector('.title');
-titleElem.textContent = text;
-
+const searchElem = document.querySelector('.search__btn');
+const inputElem = document.querySelector('.search__input');
+function handleClick() {
+  console.log(inputElem.value)
 }
-// console.dir(setTitle('text'));
+searchElem.addEventListener('click', handleClick);
 
