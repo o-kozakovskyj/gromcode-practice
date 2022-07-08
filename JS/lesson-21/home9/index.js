@@ -7,4 +7,4 @@ const secondInput = document.querySelector('[name="password"]');
 secondInput.type = "password"
 }
 
-// finishForm()
+finishForm()
