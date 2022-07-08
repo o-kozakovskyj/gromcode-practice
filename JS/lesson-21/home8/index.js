@@ -15,4 +15,4 @@ export function finishList() {
   liFive.after(liSix);
 }
 
-finishList()
+// finishList()
