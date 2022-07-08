@@ -1,23 +1,6 @@
-export function getTitle() {
-  const titleElement = document.querySelector('.title');
-  return titleElement.textContent;
+const checkElrm = document.querySelector('.task-status');
+function handleChanger() {
+  checkElrm.checked === true ? console.log(true) : console.log(false)
+  console.log(checkElrm.value)
 }
-console.dir(getTitle())
-export function getDescription() {
-  const descriptionElement = document.querySelector('.about');
-  return descriptionElement.innerText;
-}
-console.dir(getDescription())
-
-export function getPlans() {
-  const plansElement = document.querySelector('.plans');
-  return plansElement.innerHTML;
-}
-console.dir(getPlans())
-
-export function getGoal() {
-  const goalElement = document.querySelector('.goal');
-  return goalElement.outerHTML;
-}
-
-console.dir(getGoal())
+checkElrm.addEventListener('change', handleChanger);
