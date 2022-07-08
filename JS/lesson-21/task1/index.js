@@ -16,21 +16,21 @@ const renderTasks = tasksList => {
   const listEl = document.querySelector('.list');
 
   const listItemsElements = tasksList.sort((a, b) => a.done - b.done)
-  .map(({ text, done}) => {
-    const listItemEl = document.createElement('li');
-    listItemEl.classList.add('list__item');
-    if (done) {
-      listItemEl.classList.add('list__item_done')
-      console.log( listItemEl)
-   }
-    const checkEl = document.createElement('input');
-    checkEl.classList.add('.list__item-checkbox');
-    checkEl.setAttribute('type','checkbox');
-    checkEl.checked = done;
-    listItemEl.append(checkEl,text);
-    return listItemEl;
-  });
-listEl.append(...listItemsElements)
+    .map(({ text, done }) => {
+      const listItemEl = document.createElement('li');
+      listItemEl.classList.add('list__item');
+      if (done) {
+        listItemEl.classList.add('list__item_done')
+        console.log(listItemEl)
+      }
+      const checkEl = document.createElement('input');
+      checkEl.classList.add('.list__item-checkbox');
+      checkEl.setAttribute('type', 'checkbox');
+      checkEl.checked = done;
+      listItemEl.append(checkEl, text);
+      return listItemEl;
+    });
+  listEl.append(...listItemsElements)
 };
 
 
