@@ -1,37 +1,51 @@
-'use strict';
+const divElem = document.querySelector('.rect_div')
+const pElem = document.querySelector('.rect_p')
+const spanElem = document.querySelector('.rect_span')
+const logTarget = (text, color) => {
+  const evensListItem = document.querySelector('.events-list');
+  evensListItem.innerHTML += `<span style="color: ${color}; margin-left: 8px">${text}</span>`
 
-export const tasks = [
-  { text: 'Buy milk', done: false },
-  { text: 'Pick up Tom from airport', done: false },
-  { text: 'Visit party', done: false },
-  { text: 'Visit doctor', done: true },
-  { text: 'Buy meat', done: true },
-];
-
-/**
- * @param {object[]} tasksList
- * @return {undefined}
- */
-const renderTasks = tasksList => {
-  const listEl = document.querySelector('.list');
-
-  const listItemsElements = tasksList.sort((a, b) => a.done - b.done)
-    .map(({ text, done }) => {
-      const listItemEl = document.createElement('li');
-      listItemEl.classList.add('list__item');
-      if (done) {
-        listItemEl.classList.add('list__item_done')
-        console.log(listItemEl)
-      }
-      const checkEl = document.createElement('input');
-      checkEl.classList.add('.list__item-checkbox');
-      checkEl.setAttribute('type', 'checkbox');
-      checkEl.checked = done;
-      listItemEl.append(checkEl, text);
-      return listItemEl;
-    });
-  listEl.append(...listItemsElements)
-};
+}
+const logGreenDiv = logTarget.bind(null, 'DIV', 'green')
+const logGreenP = logTarget.bind(null, 'P', 'green')
+const logGreenSpan = logTarget.bind(null, 'SPAN', 'green')
+divElem.addEventListener('click', logGreenDiv)
+pElem.addEventListener('click', logGreenP)
+spanElem.addEventListener('click', logGreenSpan)
 
 
-renderTasks(tasks)
+const logGreyDiv = logTarget.bind(null, 'DIV', 'grey')
+const logGreyP = logTarget.bind(null, 'P', 'grey')
+const logGreySpan = logTarget.bind(null, 'SPAN', 'grey')
+divElem.addEventListener('click', logGreyDiv, true)
+pElem.addEventListener('click', logGreyP, true)
+spanElem.addEventListener('click', logGreySpan, true)
+
+const clearBtnElem = document.querySelector('.clear-btn');
+function handleClear() {
+  const evensListItem = document.querySelector('.events-list')
+  evensListItem.innerHTML = "";
+}
+clearBtnElem.addEventListener('click', handleClear)
+
+const removeBtnEl = document.querySelector('.remove-handlers-btn');
+function handlerRemove() {
+  divElem.removeEventListener('click', logGreenDiv)
+  pElem.removeEventListener('click', logGreenP)
+  spanElem.removeEventListener('click', logGreenSpan)
+  divElem.removeEventListener('click', logGreyDiv, true)
+  pElem.removeEventListener('click', logGreyP, true)
+  spanElem.removeEventListener('click', logGreySpan, true)
+}
+removeBtnEl.addEventListener('click', handlerRemove)
+
+const attachBtnEl = document.querySelector('.attach-handlers-btn');
+function handlerAttach() {
+  divElem.addEventListener('click', logGreenDiv)
+  pElem.addEventListener('click', logGreenP)
+  spanElem.addEventListener('click', logGreenSpan)
+  divElem.addEventListener('click', logGreyDiv, true)
+  pElem.addEventListener('click', logGreyP, true)
+  spanElem.addEventListener('click', logGreySpan, true)
+}
+attachBtnEl.addEventListener('click', handlerAttach)
