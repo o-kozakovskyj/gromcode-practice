@@ -1,6 +1,6 @@
-export function setButton(buttonText) {
-const bodyElem = document.querySelector('body');
-bodyElem.innerHTML = `<button>${buttonText}</button>`
-// bodyElem.textContent = `<button>${buttonText}</button>`
+const btnElem = document.querySelector('.single-use-btn');
+function handleClick() {
+  console.dir('clicked')
 }
-setButton('button text')
+btnElem.addEventListener('click', handleClick);
+btnElem.removeEventListener('click', handleClick)
