@@ -1,5 +1,6 @@
-export function clearList() {
-  const categoriesElem = document.querySelector('.categories');
-  categoriesElem.innerHTML = ``
+const btnElems = Array.from(document.querySelectorAll('.btn'))
+function handleClick(event) {
+console.log(event.target.textContent)
 }
-// clearList()
+btnElems[0].addEventListener('click', handleClick)
+btnElems[1].addEventListener('click', handleClick)
