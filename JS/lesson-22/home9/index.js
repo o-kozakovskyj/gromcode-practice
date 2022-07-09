@@ -1,11 +1,6 @@
-export function finishForm() {
-  const form = document.querySelector('.login-form');
-  const input  = document.createElement('input');
-  input.name = "login"
-  input.type = "text"
-  form.prepend(input)
-const secondInput = document.querySelector('[name="password"]');
-secondInput.type = "password"
+const buttonElems = Array.from(document.querySelectorAll('.pagination__page'));
+console.log(buttonElems)
+function handleClick(event) {
+console.log(event.target.dataset.pageNumber)
 }
-
-// finishForm()
+buttonElems.map(buttonElem => buttonElem.addEventListener('click',handleClick))
