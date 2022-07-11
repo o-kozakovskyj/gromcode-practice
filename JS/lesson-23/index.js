@@ -40,6 +40,6 @@ const formElem = document.querySelector('.login-form');
 const onFormSubmit = event => {
   event.preventDefault()
   formData = Object.fromEntries(new FormData(formElem))
-  alert(JSON.stringify(formData));
+  alert(formData);
 }
 formElem.addEventListener(onFormSubmit('submit', onFormSubmit))
