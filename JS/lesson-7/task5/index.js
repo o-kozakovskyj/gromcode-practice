@@ -6,7 +6,6 @@ const withdraw = (clients, balances, client, amount) => {
     balances[clients.indexOf(client)] = clientBalance;
     return clientBalance;
   }
-
   return -1;
 };
 
