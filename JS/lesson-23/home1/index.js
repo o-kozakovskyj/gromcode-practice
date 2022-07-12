@@ -43,17 +43,20 @@ renderTasks(tasks);
 //   - change the property done: false/true
 //   - clear list
 //  -  build list using new array
-
+const reset = (listToDo) => {
+  listElem.textContent = '';
+  renderTasks(listToDo);
+}
 
 const handleCheck = (event) => {
   const taskNumber = event.target.dataset.number;
+
   if (tasks[taskNumber].done === false) {
     tasks[taskNumber].done = true
   } else {
     tasks[taskNumber].done = false
   }
-  listElem.textContent = '';
-  renderTasks(tasks);
+  reset(tasks);
 }
 listElem.addEventListener('click', handleCheck)
 
@@ -79,7 +82,6 @@ const handleAddTask = () => {
   }
   document.querySelector('.task-input').value = '';  // !!!
   tasks.push(newTask)
-  listElem.textContent = '';
-  renderTasks(tasks);
+  reset(tasks);
 }
 btnCreateElement.addEventListener('click', handleAddTask)
