@@ -1,0 +1,85 @@
+const tasks = [
+  { text: 'Buy milk', done: false },
+  { text: 'Pick up Tom from airport', done: false },
+  { text: 'Visit party', done: false },
+  { text: 'Visit doctor', done: true },
+  { text: 'Buy meat', done: true },
+];
+
+const listElem = document.querySelector('.list');
+const checkbox = document.createElement('input');
+const renderTasks = tasksList => {
+  if (Object.keys(tasksList).length === 0) {
+    return
+  }
+  const tasksElems = tasksList
+    .sort((a, b) => a.done - b.done)
+    .map(({ text, done },index) => {
+      const listItemElem = document.createElement('li');
+      listItemElem.classList.add('list__item');
+      const checkbox = document.createElement('input');
+      checkbox.setAttribute('type', 'checkbox');
+      checkbox.checked = done;
+      checkbox.classList.add('list__item-checkbox');
+      checkbox.dataset.number = index;
+      if (done) {
+        listItemElem.classList.add('list__item_done');
+      }
+      listItemElem.append(checkbox, text);
+
+      return listItemElem;
+    });
+
+  listElem.append(...tasksElems);
+};
+
+renderTasks(tasks);
+
+// put your code here
+// 1. alg
+//   - install id for checkbox
+//   - find checked checkbox on id
+//   - find checked task on id (id === index)
+//   - change the property done: false/true
+//   - clear list
+//  -  build list using new array
+
+
+const handleCheck = (event) => {
+  const taskNumber = event.target.dataset.number;
+  if (tasks[taskNumber].done === false) {
+    tasks[taskNumber].done = true
+  } else {
+    tasks[taskNumber].done = false
+  }
+  listElem.textContent = '';
+  renderTasks(tasks);
+}
+listElem.addEventListener('click', handleCheck)
+
+//2. alg
+// - if field is empty -do nothing
+// - find input & text inside
+// - find btn
+// - add new task by btn click
+// - clear input
+// - clear list
+//  - build new list using new array
+
+const inputElem = document.querySelector('.task-input');
+const btnCreateElement = document.querySelector('.create-task-btn');
+const handleAddTask = () => {
+  const inputValue = document.querySelector('.task-input').value 
+  if (inputValue === '') {
+    return
+  }
+  const newTask = {
+    text: inputValue,
+    done: false,
+  }
+  document.querySelector('.task-input').value = '';  // !!!
+  tasks.push(newTask)
+  listElem.textContent = '';
+  renderTasks(tasks);
+}
+btnCreateElement.addEventListener('click', handleAddTask)
