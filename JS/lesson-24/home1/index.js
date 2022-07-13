@@ -1,34 +1,15 @@
 
-function User(name, age) {
- this.name = name;
- this.age = age;
+
+
+const getDiff = (startDate, endDate) => {
+ const msDifference = Math.abs(new Date(endDate).getTime()-new Date(startDate).getTime()) 
+  const seconds = parseInt((msDifference/1000)%60);
+  const minutes = parseInt((msDifference/(1000*60))%60);
+  const hours = parseInt((msDifference/(1000*60*60))%24);
+  const days = parseInt(msDifference/(1000*60*60*24));
+  return (`${days}d ${hours}h  ${minutes}m ${seconds}s`);
 }
 
-User.prototype.sayHi = function() {
-  console.log(`Hi, I am ${this.name}`)
-  };
-  User.prototype.requestNewPhoto = function() {
-    console.log(`New photo request was sent for ${this.name}`)
-  };
-User.prototype.setAge = function(value) {
-  this.age = value;
-  if (value < 0) {
-    return false
-  }
-  if (value >= 25) {
-    console.log(`New photo request was sent for ${this.name}`);
-  }
-  return this.age;
-}
-
-//---test data----
-
-const user1 = new User('Bob',18)
-const user2 = new User('Djin', 110) 
-console.log(user1)
-console.log(user2)
-user1.sayHi()
-user2.sayHi()
-user1.setAge(69)
-console.log(user1.setAge(10))
-console.log(user1.setAge(-9))
+console.log(getDiff(new Date(2022, 1, 12), new Date(2022, 11, 12)));
+console.log(getDiff(new Date(2020, 1), new Date(2022, 11, 12, 16, 40, 45)));
+console.log(getDiff(new Date(2024, 10, 12), new Date(2020, 11, 12)));
