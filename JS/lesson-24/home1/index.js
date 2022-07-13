@@ -1,7 +1,7 @@
 
 
 
-const getDiff = (startDate, endDate) => {
+export const getDiff = (startDate, endDate) => {
  const msDifference = Math.abs(new Date(endDate).getTime()-new Date(startDate).getTime()) 
   const seconds = parseInt((msDifference/1000)%60);
   const minutes = parseInt((msDifference/(1000*60))%60);
