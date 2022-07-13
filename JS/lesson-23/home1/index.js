@@ -49,12 +49,12 @@ const reset = (listToDo) => {
 }
 
 const handleCheck = (event) => {
-  const taskNumber = event.target.dataset.number;
+  const taskNumber = tasks[event.target.dataset.number];
 
-  if (tasks[taskNumber].done === false) {
-    tasks[taskNumber].done = true
+  if (taskNumber.done === false) {
+    taskNumber.done = true
   } else {
-    tasks[taskNumber].done = false
+    taskNumber.done = false
   }
   reset(tasks);
 }
@@ -69,10 +69,10 @@ listElem.addEventListener('click', handleCheck)
 // - clear list
 //  - build new list using new array
 
-const inputElem = document.querySelector('.task-input');
 const btnCreateElement = document.querySelector('.create-task-btn');
 const handleAddTask = () => {
-  const inputValue = document.querySelector('.task-input').value 
+  let inputValue = document.querySelector('.task-input').value 
+  console.log(inputValue)
   if (inputValue === '') {
     return
   }
@@ -80,6 +80,7 @@ const handleAddTask = () => {
     text: inputValue,
     done: false,
   }
+  console.log(document.querySelector('.task-input'))
   document.querySelector('.task-input').value = '';  // !!!
   tasks.push(newTask)
   reset(tasks);
