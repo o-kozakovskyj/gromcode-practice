@@ -6,7 +6,7 @@ localStorage.clear()
     isMarried: false,
     ownAvto: null,
   }))
-const string = JSON.stringify({ adress: 'Ukraine' })
+
   localStorage.setItem('adress', 'Ukraine')
 export const getLocalStorageData = () => {
 
