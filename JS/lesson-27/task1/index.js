@@ -6,8 +6,11 @@ localStorage.clear()
     isMarried: false,
     ownAvto: null,
   }))
+const string = JSON.stringify({ adress: 'Ukraine' })
+  localStorage.setItem('adress', 'Ukraine')
 export const getLocalStorageData = () => {
 
- return JSON.parse(localStorage.getItem("obj"))
+  return JSON.parse(localStorage.getItem("obj")), localStorage.getItem("adress")
+  
 }
 console.log(getLocalStorageData())
