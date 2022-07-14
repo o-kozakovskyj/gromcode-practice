@@ -1,11 +1,16 @@
+//algo
+// get keys 1 get keys2 & compare
+// iterate key1 key2 value1 value2
+// if falls => return false
 function compareObjects(obj1, obj2) {
-  if (Object.keys(obj1).length !== Object.keys(obj2).length) {
-    return false;
-  }
-  return (
-    Object.keys(obj1).join('') === Object.keys(obj2).join('') &&
-    Object.values(obj1).join('') === Object.values(obj2).join('')
-  );
+  // if (Object.keys(obj1).length !== Object.keys(obj2).length) {
+  //   return false;
+  // }
+  // return (
+  //   Object.keys(obj1).join('') === Object.keys(obj2).join('') &&
+  //   Object.values(obj1).join('') === Object.values(obj2).join('')
+  // );
+  return obj1.filter()
 }
 
 // examples
