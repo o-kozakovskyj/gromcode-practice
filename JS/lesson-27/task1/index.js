@@ -7,10 +7,21 @@ localStorage.clear()
     ownAvto: null,
   }))
 
-  localStorage.setItem('adress', 'Ukraine')
+localStorage.setItem('adress', JSON.stringify('Ukraine'))
+localStorage.setItem('street', JSON.stringify('Mira'))
+localStorage.setItem('Nextstreet', 'Mirop')
 export const getLocalStorageData = () => {
 
-  return JSON.parse(localStorage.getItem("obj")), localStorage.getItem("adress")
+return Object.entries(localStorage)
+  .reduce((newObj, [key, value]) => {
+    let newValue;
+    try {
+      newValue = JSON.parse(value)
+    } catch(e) {
+      newValue = value 
+    }
+      return { ...newObj, [key]: newValue };
+  }, {})
   
 }
 console.log(getLocalStorageData())
