@@ -25,5 +25,5 @@ export const calc = initValue => {
 }
 // ------test data------
 
-console.log(calc(3).add(2).mult(4).div(10).subtruct(5).result())
+console.log(calc(3).add(2).mult(4).div(10).subtract(5).result())
 console.log(calc(3).result())
