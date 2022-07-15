@@ -5,7 +5,7 @@ export const calc = initValue => {
       result += number;
       return this;
     },
-    subtruct(number) {
+    subtract(number) {
       result -= number;
       return this;
     },
