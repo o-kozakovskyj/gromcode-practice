@@ -19,9 +19,8 @@ const convertToMillisec = (type, number) => {
     case 'milliseconds': return number;
   }
 }
-const convertData = (data) => new Data(data).getTime;
 
-const shmoment = initDate => {
+export const shmoment = initDate => {
   let resultData = new Date(initDate).getTime();
   console.log(resultData)
   const hronometr = {
