@@ -62,10 +62,7 @@ export const shmoment = initDate => {
     },
     result() {
      
-      if (newData === undefined) {
-        this.getNewData()
-      }
-      return newData;
+      return newData || this.getNewData();
     },
   }
 
