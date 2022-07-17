@@ -3,7 +3,7 @@
 export const shmoment = initDate => {
   let oldData = initDate;
   let newData = initDate;
-  let year = 0;
+  let years = 0;
   let month = 0;
   let date = 0;
   let hours = 0;
@@ -14,7 +14,7 @@ export const shmoment = initDate => {
   const hronometr = {
     add(type, data) {
       switch (type) {
-        case 'years': year += data;
+        case 'years': years += data;
           break;
         case 'months': month += data;
           break;
@@ -29,7 +29,7 @@ export const shmoment = initDate => {
         case 'milliseconds': milliseconds += data;
           break;
       }
-      newData = new Date((oldData.getFullYear() + year),
+      newData = new Date((oldData.getFullYear() + years),
         (oldData.getMonth() + month),
         (oldData.getDate() + date),
         (oldData.getHours() + hours),
@@ -40,7 +40,7 @@ export const shmoment = initDate => {
     },
     subtract(type, data) {
       switch (type) {
-        case 'years': year -= data;
+        case 'years': years -= data;
           break;
         case 'months': month -= data;
           break;
@@ -55,7 +55,7 @@ export const shmoment = initDate => {
         case 'milliseconds': milliseconds += data;
           break;
       }
-      newData = new Date((oldData.getFullYear() - year),
+      newData = new Date((oldData.getFullYear() + years),
         (oldData.getMonth() + month),
         (oldData.getDate() + date),
         (oldData.getHours() + hours),
@@ -66,7 +66,7 @@ export const shmoment = initDate => {
       return this;
     },
     result() {
-
+      console.log(oldData);
       return newData;
     },
   }
@@ -76,5 +76,5 @@ export const shmoment = initDate => {
 
 //--- test data---
 
-console.log(shmoment(new Date(2020, 1, 1, 1, 1)).add('months', 1).subtract('months', 1).subtract('months', 1).subtract('months', 1).result());
-console.log(shmoment(new Date(2018, 10, 3, 0, 15)).result())
+console.log(shmoment(new Date(2020, 0, 1, 1, 1)).subtract('years', 4).subtract('months', 1).subtract('months', 1).result());
+// console.log(shmoment(new Date(2018, 10, 3, 0, 15)).result())
