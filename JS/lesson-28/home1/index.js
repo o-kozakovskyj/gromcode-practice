@@ -2,7 +2,7 @@
 
 export const shmoment = initDate => {
   let oldData = initDate;
-  let newData = initDate;
+  let newData;
   let years = 0;
   let months = 0;
   let days = 0;
@@ -75,5 +75,5 @@ export const shmoment = initDate => {
 
 //--- test data---
 
-console.log(shmoment(new Date(2020, 0, 1, 1, 1,1, 6)).subtract('milliseconds', 1).subtract('milliseconds', 100).subtract('milliseconds', 1).result());
+console.log(shmoment(new Date(2020, 0, 1, 1, 1,1)).subtract('days', 1).subtract('milliseconds', 100).subtract('milliseconds', 1).result());
 // console.log(shmoment(new Date(2018, 10, 3, 0, 15)).result())
