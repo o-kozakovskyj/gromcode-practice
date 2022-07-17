@@ -54,7 +54,7 @@ export const shmoment = initDate => {
       return this;
     },
     result() {
-      return newData;
+      return newData || oldData;
     }
   }
   return hronometr;
@@ -62,4 +62,4 @@ export const shmoment = initDate => {
 
 //--- test data---
 console.log(shmoment(new Date(2021, 1, 20, 20, 22)).add('years', 1).add('months', 1).subtract('hours', 10).result());
-console.log(shmoment(new Date(2018, 10, 3, 0, 15)).add('minutes', 1).result())
+console.log(shmoment(new Date(2018, 10, 3, 0, 15)).result())
