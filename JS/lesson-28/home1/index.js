@@ -62,7 +62,10 @@ export const shmoment = initDate => {
     },
     result() {
      
-      return newData || this.getNewData();
+      if (newData === undefined) {
+        this.getNewData()
+      }
+      return newData;
     },
   }
 
@@ -71,5 +74,5 @@ export const shmoment = initDate => {
 
 //--- test data---
 console.log(shmoment(new Date(2010, 7, 5)).add('years',5).result())
-console.log(shmoment(new Date(2020, 0, 1, 1, 1,1)).subtract('days', 1).subtract('years', 100).subtract('hours', 1).result());
-console.log(shmoment(new Date(2018, 10, 3, 0, 15)).result())
+// console.log(shmoment(new Date(2020, 0, 1, 1, 1,1)).subtract('days', 1).subtract('years', 100).subtract('hours', 1).result());
+// console.log(shmoment(new Date(2018, 10, 3, 0, 15)).result())
