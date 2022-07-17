@@ -67,7 +67,13 @@ export const shmoment = initDate => {
     result() {
      
       if (newData === undefined) {
-        newData = oldData;
+         newData = new Date((oldData.getFullYear() + years),
+        (oldData.getMonth() + months),
+        (oldData.getDate() + days),
+        (oldData.getHours() + hours),
+        (oldData.getMinutes() + minutes),
+        (oldData.getSeconds() + seconds),
+        (oldData.getMilliseconds() + milliseconds))
       }
       return newData;
     },
