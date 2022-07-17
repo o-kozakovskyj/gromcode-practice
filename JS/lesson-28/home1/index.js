@@ -1,44 +1,64 @@
-//algo
-//get operation
-// get type of time
-// convert to ms
-// convert old Data to ms
-// make operation
-// return new date using ms result
 
-// export const shmoment = (initDate) => {
-
-const convertToMillisec = (type, number) => {
-  switch (type) {
-    case 'years': return number * 31536000000;
-    case 'months': return number * 2592000000;
-    case 'days': return number * 86400000
-    case 'hours': return number * 3600000;
-    case 'minutes': return number * 60000;
-    case 'seconds': return number * 1000;
-    case 'milliseconds': return number;
-  }
-}
 
 export const shmoment = initDate => {
-  let resultData = new Date(initDate).getTime();
-  console.log(resultData)
+  let resultData = initDate;
+  let year = 0;
+  let month = 0;
+  let date = 0;
+  let hours = 0;
+  let minutes = 0;
+  let seconds = 0;
+  let milliseconds = 0;
+
+  const whatToChange = (type, data) => {
+    switch (type) {
+      case 'years': year = data;
+        break;
+      case 'months': month = data;
+        break;
+      case 'days': date = data;
+        break;
+      case 'hours': hours = data;
+        break;
+      case 'minutes': minutes = data;
+        break;
+      case 'seconds': seconds = data;
+        break;
+      case 'milliseconds': milliseconds = data;
+        break;
+    }
+  }
+
   const hronometr = {
     add(type, num) {
-      
-      resultData += convertToMillisec(type, num);
-      
+      whatToChange(type, num);
+      resultData = new Date((resultData.getFullYear() + year),
+        (resultData.getMonth() + month),
+        (resultData.getDate() + date),
+        (resultData.getHours() + hours),
+        (resultData.getMinutes() + minutes),
+        (resultData.getSeconds() + seconds),
+        (resultData.getMilliseconds() + milliseconds))
       return this;
     },
     subtract(type, num) {
-      resultData -= convertToMillisec(type, num);
+      whatToChange(type, num);
+      resultData = new Date((resultData.getFullYear() - year),
+        (resultData.getMonth() - month),
+        (resultData.getDate() - date),
+        (resultData.getHours() - hours),
+        (resultData.getMinutes() - minutes),
+        (resultData.getSeconds() - seconds),
+        (resultData.getMilliseconds() - milliseconds))
       return this;
     },
     result() {
-      return new Date(resultData);
+      return resultData;
     }
   }
   return hronometr;
 }
+
 //--- test data---
-console.log(shmoment(new Date(2022, 7)).add('minutes', 2).add('years', 4).result())
+console.log(shmoment(new Date(2021, 1, 20, 20, 22)).add('years', 1).add('months', 1).subtract('hours', 10).result());
+console.log(shmoment(new Date(2018, 10, 3, 0, 15)).result())
