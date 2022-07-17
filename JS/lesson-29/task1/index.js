@@ -1,4 +1,4 @@
-export const addImage = (imgSrc, callback) => {
+export const addImage = (imgSrc, onImageLoaded) => {
   const imgElem = document.createElement('img');
   imgElem.setAttribute('alt', 'my photo');
   imgElem.src = imgSrc;
@@ -27,7 +27,7 @@ const onImageLoaded = (error, imgElem) => {
 };
 
 // examples
-addImage(
-  'https:// p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg',
-  onImageLoaded,
-);
+// addImage(
+//   'https:// p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg',
+//   onImageLoaded,
+// );
