@@ -1,7 +1,8 @@
 
 
 export const shmoment = initDate => {
-  let resultData = initDate;
+  let oldData = initDate;
+  let newData;
   let year = 0;
   let month = 0;
   let date = 0;
@@ -32,28 +33,28 @@ export const shmoment = initDate => {
   const hronometr = {
     add(type, num) {
       whatToChange(type, num);
-      resultData = new Date((resultData.getFullYear() + year),
-        (resultData.getMonth() + month),
-        (resultData.getDate() + date),
-        (resultData.getHours() + hours),
-        (resultData.getMinutes() + minutes),
-        (resultData.getSeconds() + seconds),
-        (resultData.getMilliseconds() + milliseconds))
+      newData = new Date((oldData.getFullYear() + year),
+        (oldData.getMonth() + month),
+        (oldData.getDate() + date),
+        (oldData.getHours() + hours),
+        (oldData.getMinutes() + minutes),
+        (oldData.getSeconds() + seconds),
+        (oldData.getMilliseconds() + milliseconds))
       return this;
     },
     subtract(type, num) {
       whatToChange(type, num);
-      resultData = new Date((resultData.getFullYear() - year),
-        (resultData.getMonth() - month),
-        (resultData.getDate() - date),
-        (resultData.getHours() - hours),
-        (resultData.getMinutes() - minutes),
-        (resultData.getSeconds() - seconds),
-        (resultData.getMilliseconds() - milliseconds))
+      newData = new Date((oldData.getFullYear() - year),
+        (oldData.getMonth() - month),
+        (oldData.getDate() - date),
+        (oldData.getHours() - hours),
+        (oldData.getMinutes() - minutes),
+        (oldData.getSeconds() - seconds),
+        (oldData.getMilliseconds() - milliseconds))
       return this;
     },
     result() {
-      return resultData;
+      return newData;
     }
   }
   return hronometr;
@@ -61,4 +62,4 @@ export const shmoment = initDate => {
 
 //--- test data---
 console.log(shmoment(new Date(2021, 1, 20, 20, 22)).add('years', 1).add('months', 1).subtract('hours', 10).result());
-console.log(shmoment(new Date(2018, 10, 3, 0, 15)).result())
+console.log(shmoment(new Date(2018, 10, 3, 0, 15)).add('minutes', 1).result())
