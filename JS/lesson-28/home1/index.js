@@ -4,21 +4,20 @@ export const shmoment = initDate => {
   let oldData = initDate;
   let newData = initDate;
   let years = 0;
-  let month = 0;
-  let date = 0;
+  let months = 0;
+  let days = 0;
   let hours = 0;
   let minutes = 0;
   let seconds = 0;
   let milliseconds = 0;
-
   const hronometr = {
     add(type, data) {
       switch (type) {
         case 'years': years += data;
           break;
-        case 'months': month += data;
+        case 'months': months += data;
           break;
-        case 'days': date += data;
+        case 'days': days += data;
           break;
         case 'hours': hours += data;
           break;
@@ -30,8 +29,8 @@ export const shmoment = initDate => {
           break;
       }
       newData = new Date((oldData.getFullYear() + years),
-        (oldData.getMonth() + month),
-        (oldData.getDate() + date),
+        (oldData.getMonth() + months),
+        (oldData.getDate() + days),
         (oldData.getHours() + hours),
         (oldData.getMinutes() + minutes),
         (oldData.getSeconds() + seconds),
@@ -42,9 +41,9 @@ export const shmoment = initDate => {
       switch (type) {
         case 'years': years -= data;
           break;
-        case 'months': month -= data;
+        case 'months': months -= data;
           break;
-        case 'days': date -= data;
+        case 'days': days -= data;
           break;
         case 'hours': hours -= data;
           break;
@@ -52,12 +51,12 @@ export const shmoment = initDate => {
           break;
         case 'seconds': seconds -= data;
           break;
-        case 'milliseconds': milliseconds += data;
+        case 'milliseconds': milliseconds -= data;
           break;
       }
       newData = new Date((oldData.getFullYear() + years),
-        (oldData.getMonth() + month),
-        (oldData.getDate() + date),
+        (oldData.getMonth() + months),
+        (oldData.getDate() + days),
         (oldData.getHours() + hours),
         (oldData.getMinutes() + minutes),
         (oldData.getSeconds() + seconds),
@@ -76,5 +75,5 @@ export const shmoment = initDate => {
 
 //--- test data---
 
-console.log(shmoment(new Date(2020, 0, 1, 1, 1)).subtract('years', 4).subtract('months', 1).subtract('months', 1).result());
+console.log(shmoment(new Date(2020, 0, 1, 1, 1,1, 6)).subtract('milliseconds', 1).subtract('milliseconds', 100).subtract('milliseconds', 1).result());
 // console.log(shmoment(new Date(2018, 10, 3, 0, 15)).result())
