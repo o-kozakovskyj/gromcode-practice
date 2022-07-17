@@ -66,7 +66,7 @@ export const shmoment = initDate => {
     },
     result() {
       console.log(oldData);
-      return newData;
+      return newData || oldData;
     },
   }
 
