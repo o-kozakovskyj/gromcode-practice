@@ -2,7 +2,7 @@
 
 export const shmoment = initDate => {
   let oldData = initDate;
- let newData = new Date()
+  let newData;
   let years = 0;
   let months = 0;
   let days = 0;
