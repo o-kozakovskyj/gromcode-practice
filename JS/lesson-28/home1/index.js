@@ -28,13 +28,7 @@ export const shmoment = initDate => {
         case 'milliseconds': milliseconds += data;
           break;
       }
-      newData = new Date((oldData.getFullYear() + years),
-        (oldData.getMonth() + months),
-        (oldData.getDate() + days),
-        (oldData.getHours() + hours),
-        (oldData.getMinutes() + minutes),
-        (oldData.getSeconds() + seconds),
-        (oldData.getMilliseconds() + milliseconds))
+      this.getNewData()
       return this;
     },
     subtract(type, data) {
@@ -54,26 +48,22 @@ export const shmoment = initDate => {
         case 'milliseconds': milliseconds -= data;
           break;
       }
-     newData = new Date((oldData.getFullYear() + years),
+    this.getNewData()
+      return this;
+    },
+    getNewData() {
+      newData = new Date((oldData.getFullYear() + years),
         (oldData.getMonth() + months),
         (oldData.getDate() + days),
         (oldData.getHours() + hours),
         (oldData.getMinutes() + minutes),
         (oldData.getSeconds() + seconds),
         (oldData.getMilliseconds() + milliseconds))
-
-      return this;
     },
     result() {
      
       if (newData === undefined) {
-         newData = new Date((oldData.getFullYear() + years),
-        (oldData.getMonth() + months),
-        (oldData.getDate() + days),
-        (oldData.getHours() + hours),
-        (oldData.getMinutes() + minutes),
-        (oldData.getSeconds() + seconds),
-        (oldData.getMilliseconds() + milliseconds))
+        this.getNewData()
       }
       return newData;
     },
@@ -83,6 +73,6 @@ export const shmoment = initDate => {
 }
 
 //--- test data---
-console.log(shmoment(new Date(2010, 7, 5)).result())
+console.log(shmoment(new Date(2010, 7, 5)).add('years',5).result())
 console.log(shmoment(new Date(2020, 0, 1, 1, 1,1)).subtract('days', 1).subtract('years', 100).subtract('hours', 1).result());
 console.log(shmoment(new Date(2018, 10, 3, 0, 15)).result())
