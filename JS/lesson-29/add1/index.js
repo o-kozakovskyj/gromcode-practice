@@ -9,7 +9,7 @@ const user = {
 
 
 export function delay(delay, callback, context, ...argument) {
-  setTimeout((()=>callback.call(context, argument)), delay)
+  setTimeout(callback.call(context, argument), delay)
 }
 
 delay(1000, user.sayHi,user,'Vasya', 'Dodic', 'Biba')
