@@ -3,11 +3,13 @@
 // iterate key1 key2 value1 value2
 // if falls => return false
 
-function compareObjects(obj1, obj2) {
-  if (Object.keys(obj1).length !== Object.keys(obj2).length) {
+function compareObjects(objOne, objTwo) {
+  const objOneKeys = Object.keys(objOne)
+
+  if (objOneKeys.length !== Object.keys(objTwo).length) {
     return false;
   }
-  return Object.keys(obj1).every(key => obj1[key] === obj2[key])
+  return objOneKeys.every(key => objOne[key] === objTwo[key])
 }
 
 //---test data---
