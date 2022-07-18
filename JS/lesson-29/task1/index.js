@@ -28,4 +28,4 @@ const onImageLoaded = (error, data) => {
 
 // examples
 // const imgEl = 'https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg'
-addImage(imgEl,onImageLoaded);
+// addImage(imgEl,onImageLoaded);
