@@ -4,11 +4,11 @@ export const addImage = (imgSrc, callback) => {
   imgElem.src = imgSrc;
   document.querySelector('.page').append(imgElem);
  
-  const onImageLoaded = () => {
-    const { width, height } = imgElem;
-    callback(null,{ width, height });
-  }
-  imgElem.addEventListener('load', onImageLoaded);
+  // const onImageLoaded = () => {
+  //   const { width, height } = imgElem;
+  //   callback(null,{ width, height });
+  // }
+  imgElem.addEventListener('load', callback);
   imgElem.addEventListener('error', () => callback('Image load is failed'))
   
 };
