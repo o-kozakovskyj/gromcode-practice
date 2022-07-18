@@ -6,12 +6,12 @@
  * @return {undefined}
  */
 export const pinger = (count, period) => {
-  let i = count - 1;
+  let i = count;
   console.log('Ping');
   const interval = setInterval(cicle, period)
   function cicle() {
-    if (i > 0) {
-      i--;
+    if (--i > 0) {
+     
       console.log('Ping')
     } else {
       clearInterval(interval);
