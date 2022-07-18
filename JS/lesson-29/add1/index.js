@@ -8,7 +8,7 @@ const user = {
 }
 
 
-function delay(delay, callback, context, ...argument) {
+export function delay(delay, callback, context, ...argument) {
   setTimeout((()=>callback.call(context, argument)), delay)
 }
 
