@@ -17,7 +17,7 @@ const user1 = {
 
 
  export function delay(delay, callback, context,...args) {
-  setTimeout((callback.call(context, args)), delay)
+  setTimeout((callback.call(context,args)), delay)
 }
 
 delay(100000, user.sayHi, user, 'Tom', 'John', 'Bob',1, 2,3)
