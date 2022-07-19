@@ -11,7 +11,7 @@ const user1 = {
   job: 'dealer',
   city: 'Paris',
   sayHi(clients) {
-    console.log(`Hi, -- ${clients} ---, I am${this.name} - ${this.job} from ${this.city}`)
+    console.log(`Hi, -- ${clients} ---, I am ${this.name} - ${this.job} from ${this.city}`)
   }
 }
 
@@ -20,5 +20,5 @@ const user1 = {
   setTimeout((callback.bind(context,args)), delay)
 }
 
-delay(100000, user.sayHi, user, 'Tom', 'John', 'Bob',1, 2,3)
+delay(100, user.sayHi, user, 'Tom', 'John', 'Bob',1, 2,3)
 delay(1000, user.sayHi,user1,'Tom', 'John', 'Bob')
