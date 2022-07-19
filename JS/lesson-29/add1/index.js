@@ -17,8 +17,8 @@ const user1 = {
 
 
 export function delay(delay, callback, context,...args) {
-  setTimeout(()=>(callback.call(context,args)), delay)
+  setTimeout(()=>(callback.call(context,[].slice.call(args))), delay)
 }
 
-delay(1000, user.sayHi, user, 'Vasya', 'Dodic', 'Biba')
+delay(1000, user.sayHi, user, 'Vasya', 'Dodic', 'Biba',1, 2,3)
 delay(1000, user.sayHi,user1,'Vasya', 'Dodic', 'Biba')
