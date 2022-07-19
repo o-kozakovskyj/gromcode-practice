@@ -10,14 +10,14 @@ const user1 = {
   name: "Tom",
   job: 'dealer',
   city: 'Paris',
-  sayHi(client) {
-    console.log(`Hi, -- ${client}---, I am${this.name} - ${this.job} from ${this.city}`)
+  sayHi(arguments) {
+    console.log(`Hi, -- ${Array.from(arguments)}---, I am${this.name} - ${this.job} from ${this.city}`)
   }
 }
 
 
-export function delay(delay, callback, context,...args) {
-  setTimeout((callback.call(context, args)), delay)
+ export function delay(delay, callback, context,...arguments) {
+  setTimeout((callback.call(context, arguments)), delay)
 }
 
 delay(10000, user.sayHi, user, 'Tom', 'John', 'Bob',1, 2,3)
