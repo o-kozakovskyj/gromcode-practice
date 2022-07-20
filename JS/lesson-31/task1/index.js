@@ -4,29 +4,26 @@
  */
 export const requestUserData = (userId) => {
   const p = new Promise((resolve, rejected) => {
-    setTimeout(() => {
-      if (userId === 'broken') {
+    if (userId === 'broken') {
+      setTimeout(() => {
         rejected(new Error('User not found'));
-      }
-    }, 500);
-    setTimeout(() => {
-      if (userId === 'userid777') {
+      }, 500);
+    }
+    if (userId === 'userid777') {
+      setTimeout(() => {
         resolve({
           name: 'John',
           age: 17,
           userId: 'userid777',
           email: 'userid777@example.com',
         });
-      }
-    }, 1000);
+      }, 1000);
+    }
   });
+
   return p;
 };
-const user = {
-  name: 'John',
-  age: 17,
-  userId: 'userid777',
-  email: 'userid777@example',
-};
-// requestUserData('userid777').then((data) => console.log(data));
-// requestUserData('broken').catch((error) => console.log(error));
+
+requestUserData('userid777').then((data) => console.log(data));
+requestUserData('broken').catch((error) => console.log(error));
+console.log(requestUserData('userid777').finally());
