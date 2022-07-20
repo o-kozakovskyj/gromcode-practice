@@ -8,13 +8,12 @@ export const requestUserData = (userId) => {
       setTimeout(() => {
         rejected(new Error('User not found'));
       }, 500);
-    }
-    if (userId === 'userid777') {
+    } else {
       setTimeout(() => {
         resolve({
           name: 'John',
           age: 17,
-          userId: 'userid777',
+          userId: `${userId}`,
           email: `${userId}@example.com`,
         });
       }, 1000);
