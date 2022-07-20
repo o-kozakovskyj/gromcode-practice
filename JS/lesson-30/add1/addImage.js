@@ -1,4 +1,4 @@
-export const addImage = (url, callback1, callback2) => {
+export const addImage = (url, callback1) => {
   const img = document.createElement('img');
   img.setAttribute('alt', 'User avatar');
   img.src = url;
@@ -8,10 +8,10 @@ export const addImage = (url, callback1, callback2) => {
 
   const onImageLoaded = () => {
     const { width, height } = img;
-    callback1({ width, height });
+    callback1(null, { width, height });
   };
 
-  const onImageLoadError = () => callback2(new Error('Image load failed'));
+  const onImageLoadError = () => callback1(new Error('Image load failed'));
 
   img.addEventListener('load', onImageLoaded);
 

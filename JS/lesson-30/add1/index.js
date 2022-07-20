@@ -2,7 +2,13 @@ import { addImage } from './addImage.js';
 
 export const addImageV2 = (url) => {
   const p = new Promise(function (resolve, reject) {
-    addImage(url, resolve, reject);
+    function callback(error, data) {
+      if (error) {
+        reject(error);
+      }
+      resolve(data);
+    }
+    addImage(url, callback);
   });
   return p;
 };
