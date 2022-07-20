@@ -2,7 +2,7 @@
  * @param {string} userId
  * @return {promise}
  */
-export const requestUserData = (userId) => {
+const requestUserData = (userId) => {
   const p = new Promise((resolve, rejected) => {
     if (userId === 'broken') {
       setTimeout(() => {
@@ -15,12 +15,11 @@ export const requestUserData = (userId) => {
           name: 'John',
           age: 17,
           userId: 'userid777',
-          email: 'userid777@example.com',
+          email: `${userId}@example.com`,
         });
       }, 1000);
     }
   });
-
   return p;
 };
 
