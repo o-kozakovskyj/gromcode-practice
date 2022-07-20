@@ -20,6 +20,7 @@ export const asyncCalculator = (numbr) => {
       console.log(`Doubled value:${result}`);
       return result;
     });
+  return p;
 };
 
 // asyncCalculator(3).then((value) => console.log(value));
