@@ -2,7 +2,7 @@
  * @param {string} userId
  * @return {promise}
  */
-const requestUserData = (userId) => {
+export const requestUserData = (userId) => {
   const p = new Promise((resolve, rejected) => {
     if (userId === 'broken') {
       setTimeout(() => {
