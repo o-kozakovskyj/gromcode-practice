@@ -22,4 +22,4 @@ export const asyncCalculator = (numbr) => {
     });
 };
 
-asyncCalculator(3).then((value) => console.log(value));
+// asyncCalculator(3).then((value) => console.log(value));
