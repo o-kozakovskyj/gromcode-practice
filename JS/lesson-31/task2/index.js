@@ -1,7 +1,7 @@
 export const asyncCalculator = (numbr) =>
   new Promise((resolve) => {
     setTimeout(() => {
-      console.log(`Initial value:${numbr}`);
+      console.log(`Initial value: ${numbr}`);
       resolve(numbr);
     }, 500);
   })
@@ -10,15 +10,15 @@ export const asyncCalculator = (numbr) =>
         new Promise((resolve) => {
           setTimeout(() => {
             const result = value * value;
-            console.log(`Squared value:${result}`);
+            console.log(`Squared value: ${result}`);
             resolve(result);
           }, 500);
         })
     )
     .then((value) => {
       const result = value * 2;
-      console.log(`Doubled value:${result}`);
+      console.log(`Doubled value: ${result}`);
       return result;
     });
 
-asyncCalculator(3).then((value) => console.log(value));
+asyncCalculator(5);
