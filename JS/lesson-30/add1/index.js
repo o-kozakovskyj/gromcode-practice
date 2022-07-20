@@ -12,11 +12,11 @@ export const addImageV2 = (url) => {
 
 // examples
 
-addImageV2(
-  'https://p.b igstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg'
-)
-  .then((data) => {
-    const { width, height } = data;
-    console.log({ width, height });
-  })
-  .catch((error) => console.log(error)); // ==> 'Image load failed'
+// addImageV2(
+//   'https://p.b igstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg'
+// )
+//   .then((data) => {
+//     const { width, height } = data;
+//     console.log({ width, height });
+//   })
+//   .catch((error) => console.log(error)); // ==> 'Image load failed'
