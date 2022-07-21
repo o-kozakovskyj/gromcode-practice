@@ -1,4 +1,4 @@
-/* eslint-disable no-param-reassign */
+
 const customers = {
   'customer-id-1': {
     name: 'Wiliam',
