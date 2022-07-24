@@ -1,6 +1,6 @@
-export const calc = initValue => {
+export const calc = (initValue) => {
   let result = initValue;
- const calculator = {
+  const calculator = {
     add(number) {
       result += number;
       return this;
@@ -19,11 +19,11 @@ export const calc = initValue => {
     },
     result() {
       return result;
-   }
-  }
-  return calculator
-}
+    },
+  };
+  return calculator;
+};
 // ------test data------
 
-console.log(calc(3).add(2).mult(4).div(10).subtract(5).result())
-console.log(calc(3).result())
+console.log(calc(3).add(2).mult(4).div(10).subtract(5).result());
+console.log(calc(3).result());

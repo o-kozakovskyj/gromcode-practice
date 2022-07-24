@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * @param {number} count
  * @param {number} period
@@ -8,6 +6,7 @@
 export const pinger = (count, period) => {
   let i = count;
   console.log('Ping');
+  // eslint-disable-next-line no-use-before-define
   const interval = setInterval(cicle, period);
   function cicle() {
     if (--i > 0) {

@@ -25,6 +25,7 @@ const resultPromise = addImage(imgEl);
 
 resultPromise.catch((error) => console.log(error));
 resultPromise.then(
+  // eslint-disable-next-line no-return-assign
   (data) =>
     (document.querySelector(
       '.image-size'

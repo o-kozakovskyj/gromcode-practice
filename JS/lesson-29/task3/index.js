@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * @return {undefined}
  */
@@ -22,4 +20,4 @@ export const printing = () => {
 
   console.log(3);
 };
-printing()
+printing();
