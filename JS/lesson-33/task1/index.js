@@ -10,7 +10,9 @@ const fetchUserData = (userName) => {
 };
 
 const renderUserData = (userData) => {
+  // eslint-disable-next-line camelcase
   const { avatar_url, name, location } = userData;
+  // eslint-disable-next-line camelcase
   pictureSrc.src = avatar_url;
   nameElem.textContent = name;
   userLocationElem.textContent = location ? `from ${location}` : '';
