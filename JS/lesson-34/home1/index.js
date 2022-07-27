@@ -4,7 +4,7 @@ export function getUsersList() {
 }
 
 export function getUserById(userId) {
-  const baseUrlId = `${baseUrl}/${Number(userId)}`;
+  const baseUrlId = `${baseUrl}/${userId}`;
   return fetch(baseUrlId).then((response) => response.json());
 }
 
@@ -35,7 +35,6 @@ export function updateUser(userId, userData) {
     body: JSON.stringify(userData),
   });
 }
-
 // examples
 getUsersList().then((users) => {
   console.log(users); // array of the user objects [{'id':'1', 'firstName':'Grayce' ... }, {'id':'2', 'firstName':'Ara' ... }, ...]
