@@ -26,7 +26,9 @@ const onButtonSwitch = () => {
 };
 const onFormSubmit = () => {
   const formData = Object.fromEntries(new FormData(formElem));
-  createUser(formData);
+  createUser(formData)
+    .then((response) => response.json())
+    .then((result) => alert(result));
   alert(formData);
   formElem.reset();
 };
