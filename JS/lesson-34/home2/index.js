@@ -32,7 +32,7 @@ const onFormSubmit = (event) => {
   const formData = Object.fromEntries(new FormData(formElem));
   createUser(formData)
     .then((response) => response.json())
-    .then((result) => alert(result))
+    .then((result) => alert(JSON.stringify(result)))
     .then(() => formElem.reset());
 };
 formElem.addEventListener('input', onButtonSwitch);
