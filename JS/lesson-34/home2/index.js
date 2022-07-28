@@ -15,7 +15,9 @@ function createUser(userData) {
       'Content-Type': 'application/json; charset=utf-8',
     },
     body: JSON.stringify(userData),
-  });
+  })
+    .then((response) => response.json())
+    .then((result) => alert(result));
 }
 const onButtonSwitch = () => {
   if (formElem.reportValidity()) {
@@ -26,9 +28,7 @@ const onButtonSwitch = () => {
 };
 const onFormSubmit = () => {
   const formData = Object.fromEntries(new FormData(formElem));
-  createUser(formData)
-    .then((response) => alert(response.json()))
-    .then((result) => alert(result));
+  createUser(formData);
 };
 formElem.addEventListener('input', onButtonSwitch);
 formElem.addEventListener('submit', onFormSubmit);
