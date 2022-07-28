@@ -30,8 +30,9 @@ const onButtonSwitch = (event) => {
 const onFormSubmit = (event) => {
   event.preventDefault();
   const formData = Object.fromEntries(new FormData(formElem));
-  createUser(formData).then((response) => alert(response.json()));
-  formElem.reset();
+  createUser(formData)
+    .then((response) => alert(response.json()))
+    .then(() => formElem.reset());
 };
 formElem.addEventListener('input', onButtonSwitch);
 formElem.addEventListener('submit', onFormSubmit);
