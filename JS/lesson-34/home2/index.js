@@ -29,7 +29,6 @@ const onFormSubmit = () => {
   createUser(formData)
     .then((response) => response.json())
     .then((result) => alert(result));
-  alert(formData);
   formElem.reset();
 };
 formElem.addEventListener('input', onButtonSwitch);
