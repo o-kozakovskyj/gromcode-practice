@@ -8,7 +8,7 @@ export const fetchUserData = (userName) => {
 };
 
 export const fetchRepositories = (url) => {
-  fetch(url).then((response) => {
+  return fetch(url).then((response) => {
     if (response.ok) {
       return response.json();
     }
