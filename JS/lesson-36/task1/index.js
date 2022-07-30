@@ -10,6 +10,6 @@ export const fetchUser = async (userId) => {
     throw new Error('Failed to fetch user');
   }
 };
-fetchUser('facebook')
-  .then((userData) => console.log(userData))
-  .catch(() => Promise.reject(new Error('Failed to fetch user')));
+// fetchUser('facebook')
+//   .then((userData) => console.log(userData))
+//   .catch(() => Promise.reject(new Error('Failed to fetch user')));
