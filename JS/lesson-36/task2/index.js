@@ -12,26 +12,36 @@ renderUserData(defaultUser);
 const inputElem = document.querySelector('.name-form__input');
 const btnElem = document.querySelector('.name-form__btn');
 
-const onSearchUser = () => {
+const onSearchUser = async () => {
   showSpinner();
   clearRepos();
   const userName = inputElem.value;
-  fetchUserData(userName)
-    .then((userData) => {
-      renderUserData(userData);
-      return userData.repos_url;
-    })
-    .then((url) => {
-      return fetchRepositories(url);
-    })
-    .then((reposList) => {
-      renderRepos(reposList);
-    })
-    .catch((err) => {
-      alert(err.message);
-    })
-    .finally(() => {
-      hideSpinner();
-    });
+  try {
+    const userData = await fetchUserData(userName);
+    renderUserData(userData);
+    const reposList = await fetchRepositories(userData.repos_url);
+    renderRepos(reposList);
+  } catch (err) {
+    alert(err.message);
+  } finally {
+    hideSpinner();
+  }
+
+  // .then((userData) => {
+  //   renderUserData(userData);
+  //   return userData.repos_url;
+  // })
+  // .then((url) => {
+  //   return fetchRepositories(url);
+  // })
+  // .then((reposList) => {
+  //   renderRepos(reposList);
+  // })
+  // .catch((err) => {
+  //   alert(err.message);
+  // })
+  // .finally(() => {
+  //   hideSpinner();
+  // });
 };
 btnElem.addEventListener('click', onSearchUser);
