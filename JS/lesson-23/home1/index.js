@@ -8,13 +8,13 @@ const tasks = [
 
 const listElem = document.querySelector('.list');
 const checkbox = document.createElement('input');
-const renderTasks = tasksList => {
+const renderTasks = (tasksList) => {
   if (Object.keys(tasksList).length === 0) {
-    return
+    return;
   }
   const tasksElems = tasksList
     .sort((a, b) => a.done - b.done)
-    .map(({ text, done },index) => {
+    .map(({ text, done }, index) => {
       const listItemElem = document.createElement('li');
       listItemElem.classList.add('list__item');
       const checkbox = document.createElement('input');
@@ -29,60 +29,47 @@ const renderTasks = tasksList => {
 
       return listItemElem;
     });
-
+  listElem.textContent = '';
   listElem.append(...tasksElems);
 };
-
 renderTasks(tasks);
 
-// put your code here
 // 1. alg
-//   - install id for checkbox
-//   - find checked checkbox on id
+//   - find checked checkbox id
 //   - find checked task on id (id === index)
 //   - change the property done: false/true
-//   - clear list
 //  -  build list using new array
-const reset = (listToDo) => {
-  listElem.textContent = '';
-  renderTasks(listToDo);
-}
 
-const handleCheck = (event) => {
-  const taskNumber = tasks[event.target.dataset.number];
-
-  if (taskNumber.done === false) {
-    taskNumber.done = true
+const handleChangeCheck = (event) => {
+  const taskChecked = tasks[event.target.dataset.number];
+  if (taskChecked.done === false) {
+    taskChecked.done = true;
   } else {
-    taskNumber.done = false
+    taskChecked.done = false;
   }
-  reset(tasks);
-}
-listElem.addEventListener('click', handleCheck)
+  renderTasks(tasks);
+};
+listElem.addEventListener('click', handleChangeCheck);
 
-//2. alg
+// 2. alg
 // - if field is empty -do nothing
 // - find input & text inside
 // - find btn
 // - add new task by btn click
 // - clear input
-// - clear list
 //  - build new list using new array
 
 const btnCreateElement = document.querySelector('.create-task-btn');
 const handleAddTask = () => {
-  let inputValue = document.querySelector('.task-input').value 
-  console.log(inputValue)
+  const inputValue = document.querySelector('.task-input').value;
   if (inputValue === '') {
-    return
+    return;
   }
-  const newTask = {
+  document.querySelector('.task-input').value = '';
+  tasks.push({
     text: inputValue,
     done: false,
-  }
-  console.log(document.querySelector('.task-input'))
-  document.querySelector('.task-input').value = '';  // !!!
-  tasks.push(newTask)
-  reset(tasks);
-}
-btnCreateElement.addEventListener('click', handleAddTask)
+  });
+  renderTasks(tasks);
+};
+btnCreateElement.addEventListener('click', handleAddTask);
