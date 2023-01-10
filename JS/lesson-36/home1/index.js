@@ -18,3 +18,19 @@ getUsersBlogs(['google', 'facebook', 'reactjs']).then((linksList) =>
   console.log(linksList)
 ); // ==> ["https://opensource.google/", "https://opensource.fb.com", "https://reactjs.org"]
 getUsersBlogs(['microsoft']).then((linksList) => console.log(linksList)); // ==> ["https://opensource.microsoft.com"]
+
+console.log('script start');
+
+setTimeout(function () {
+  console.log('setTimeout');
+}, 0);
+
+Promise.resolve()
+  .then(function () {
+    console.log('promise1');
+  })
+  .then(function () {
+    console.log('promise2');
+  });
+
+console.log('script end');
